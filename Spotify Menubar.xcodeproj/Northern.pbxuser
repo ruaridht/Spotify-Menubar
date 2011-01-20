@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1044, 473}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 45}";
+		};
+	};
+	256AC3F00F4B6AF500CF3369 /* Spotify_Menubar_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 686}}";
+			sepNavSelRange = "{127, 0}";
+			sepNavVisRange = "{0, 255}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = 5544079311BC315C00804FD7 /* Spotify Menubar */;
+		activeSDKPreference = macosx10.5;
+		activeTarget = 8D1107260486CEB800E47090 /* Spotify Menubar */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* Spotify Menubar */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 554407A711BC316000804FD7 /* Code sense */;
+		executables = (
+			5544079311BC315C00804FD7 /* Spotify Menubar */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					10,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					546,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 317220389;
+			PBXWorkspaceStateSaveDate = 317220389;
+		};
+		perUserProjectItems = {
+			55148CEE1222EFC6006BDA27 = 55148CEE1222EFC6006BDA27 /* PlistBookmark */;
+			552C03EB1223DC4600901ABE = 552C03EB1223DC4600901ABE /* PBXBookmark */;
+			554753411221DE96008AE72A = 554753411221DE96008AE72A /* PBXTextBookmark */;
+			555BD1BB12E85C0E009A8072 = 555BD1BB12E85C0E009A8072 /* PBXTextBookmark */;
+			555BD23A12E85CF0009A8072 = 555BD23A12E85CF0009A8072 /* PBXTextBookmark */;
+			555BD26312E86235009A8072 = 555BD26312E86235009A8072 /* PBXTextBookmark */;
+			555C9C0412E863E0007446C0 = 555C9C0412E863E0007446C0 /* PBXTextBookmark */;
+			555C9C0C12E863EE007446C0 = 555C9C0C12E863EE007446C0 /* PBXTextBookmark */;
+			55983FE212390061002C730C = 55983FE212390061002C730C /* PBXTextBookmark */;
+			55B435251254E7F400667272 = 55B435251254E7F400667272 /* PBXTextBookmark */;
+			55B435261254E7F400667272 = 55B435261254E7F400667272 /* PBXTextBookmark */;
+			55B435271254E7F400667272 = 55B435271254E7F400667272 /* PBXTextBookmark */;
+			55B4DB3212243EBF0027195F = 55B4DB3212243EBF0027195F /* PBXTextBookmark */;
+			55BC17AD1221207900E9A4AE = 55BC17AD1221207900E9A4AE /* PBXBookmark */;
+			55BC17B9122120AD00E9A4AE = 55BC17B9122120AD00E9A4AE /* PBXTextBookmark */;
+			55BC17D4122124D100E9A4AE = 55BC17D4122124D100E9A4AE /* PBXTextBookmark */;
+			55BC180512212D5100E9A4AE = 55BC180512212D5100E9A4AE /* PBXBookmark */;
+			55BC180612212D5100E9A4AE = 55BC180612212D5100E9A4AE /* PBXTextBookmark */;
+			55BC187D122141DA00E9A4AE = 55BC187D122141DA00E9A4AE /* PBXTextBookmark */;
+			55C2FCCB123963300068AB9E = 55C2FCCB123963300068AB9E /* PBXTextBookmark */;
+			55EC0FA41215FBC900B076A8 = 55EC0FA41215FBC900B076A8 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 554407A611BC316000804FD7 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 681}}";
+			sepNavSelRange = "{474, 0}";
+			sepNavVisRange = "{0, 474}";
+		};
+	};
+	55148CEE1222EFC6006BDA27 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Spotify_Menubar-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Northern/DockDesktop/DesktopME/Dev/Spotify Menubar/Spotify_Menubar-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	552C03EB1223DC4600901ABE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 55148D121222F21A006BDA27 /* welcome.jpg */;
+	};
+	5544079311BC315C00804FD7 /* Spotify Menubar */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Spotify Menubar";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	554407A611BC316000804FD7 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	554407A711BC316000804FD7 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	554407AE11BC47F500804FD7 /* AppController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 1521}}";
+			sepNavSelRange = "{110, 0}";
+			sepNavVisRange = "{0, 1239}";
+		};
+	};
+	554407AF11BC47F500804FD7 /* AppController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1566, 12480}}";
+			sepNavSelRange = "{110, 0}";
+			sepNavVisRange = "{0, 1145}";
+			sepNavWindowFrame = "{{15, 53}, {1105, 825}}";
+		};
+	};
+	554753411221DE96008AE72A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55BC180012212C9500E9A4AE /* English */;
+		name = "English: 8";
+		rLen = 0;
+		rLoc = 75;
+		rType = 0;
+		vrLen = 184;
+		vrLoc = 0;
+	};
+	555BD1BB12E85C0E009A8072 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 3";
+		rLen = 0;
+		rLoc = 25;
+		rType = 0;
+		vrLen = 314;
+		vrLoc = 0;
+	};
+	555BD23A12E85CF0009A8072 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55BE178311BCFB8300F4E587 /* GetPID.c */;
+		name = "GetPID.c: 392";
+		rLen = 0;
+		rLoc = 20901;
+		rType = 0;
+		vrLen = 1706;
+		vrLoc = 19462;
+	};
+	555BD26312E86235009A8072 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 554407AE11BC47F500804FD7 /* AppController.h */;
+		name = "AppController.h: 71";
+		rLen = 0;
+		rLoc = 1813;
+		rType = 0;
+		vrLen = 1185;
+		vrLoc = 0;
+	};
+	555C9C0412E863E0007446C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 554407AF11BC47F500804FD7 /* AppController.m */;
+		name = "AppController.m: 905";
+		rLen = 0;
+		rLoc = 28468;
+		rType = 0;
+		vrLen = 1363;
+		vrLoc = 27858;
+	};
+	555C9C0C12E863EE007446C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 554407AF11BC47F500804FD7 /* AppController.m */;
+		name = "AppController.m: 905";
+		rLen = 0;
+		rLoc = 28468;
+		rType = 0;
+		vrLen = 1363;
+		vrLoc = 27858;
+	};
+	55983FE212390061002C730C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55B4DB3512243EBF0027195F /* Growl.h */;
+		name = "Growl.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 130;
+		vrLoc = 0;
+	};
+	55AE93E81217505800037F42 /* MAAttachedWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 2522}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1989}";
+		};
+	};
+	55AE93E91217505800037F42 /* MAAttachedWindow.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 12519}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1486}";
+		};
+	};
+	55AE93EA1217505800037F42 /* MAAttachedWindowNonActivating.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = MAAttachedWindowNonActivating.h;
+		path = "/Users/Northern/DockDesktop/DesktopME/Dev/Spotify-Menubar/MAAttachedWindowNonActivating.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 293}";
+		};
+	};
+	55AE93EB1217505800037F42 /* MAAttachedWindowNonActivating.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = MAAttachedWindowNonActivating.m;
+		path = "/Users/Northern/DockDesktop/DesktopME/Dev/Spotify-Menubar/MAAttachedWindowNonActivating.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 311}";
+		};
+	};
+	55B435251254E7F400667272 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55AE93EB1217505800037F42 /* MAAttachedWindowNonActivating.m */;
+		name = "MAAttachedWindowNonActivating.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 311;
+		vrLoc = 0;
+	};
+	55B435261254E7F400667272 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55AE93EA1217505800037F42 /* MAAttachedWindowNonActivating.h */;
+		name = "MAAttachedWindowNonActivating.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 293;
+		vrLoc = 0;
+	};
+	55B435271254E7F400667272 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55AE93E81217505800037F42 /* MAAttachedWindow.h */;
+		name = "MAAttachedWindow.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1414;
+		vrLoc = 0;
+	};
+	55B4DB3212243EBF0027195F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55B4DB3312243EBF0027195F /* GrowlApplicationBridge-Carbon.h */;
+		name = "GrowlApplicationBridge-Carbon.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2434;
+		vrLoc = 0;
+	};
+	55B4DB3312243EBF0027195F /* GrowlApplicationBridge-Carbon.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = "GrowlApplicationBridge-Carbon.h";
+		path = "/Users/Northern/DockDesktop/DesktopME/Dev/Spotify Menubar/Growl.framework/Headers/GrowlApplicationBridge-Carbon.h";
+		sourceTree = "<absolute>";
+	};
+	55B4DB3512243EBF0027195F /* Growl.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Growl.h;
+		path = "/Users/Northern/DockDesktop/DesktopME/Dev/Spotify Menubar/Growl.framework/Headers/Growl.h";
+		sourceTree = "<absolute>";
+	};
+	55BC16B212210E3D00E9A4AE /* PTHotKey.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 689}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1035}";
+		};
+	};
+	55BC16B312210E3D00E9A4AE /* PTHotKey.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {901, 1638}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 874}";
+		};
+	};
+	55BC16B412210E3D00E9A4AE /* PTHotKeyCenter.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1044, 473}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 749}";
+		};
+	};
+	55BC16B512210E3D00E9A4AE /* PTHotKeyCenter.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1044, 3471}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 881}";
+		};
+	};
+	55BC16B912210E3D00E9A4AE /* PTKeyCombo.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 3250}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1024}";
+		};
+	};
+	55BC17AA1221204D00E9A4AE /* PTHeader.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 681}}";
+			sepNavSelRange = "{161, 159}";
+			sepNavVisRange = "{0, 424}";
+		};
+	};
+	55BC17AD1221207900E9A4AE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 55BC16B012210C5E00E9A4AE /* statusOn.png */;
+	};
+	55BC17B9122120AD00E9A4AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55BC17AA1221204D00E9A4AE /* PTHeader.h */;
+		name = "PTHeader.h: 8";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 265;
+		vrLoc = 0;
+	};
+	55BC17D4122124D100E9A4AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55BC16B412210E3D00E9A4AE /* PTHotKeyCenter.h */;
+		name = "PTHotKeyCenter.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 0;
+	};
+	55BC180012212C9500E9A4AE /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1271, 225}}";
+			sepNavSelRange = "{75, 0}";
+			sepNavVisRect = "{{0, 0}, {1271, 225}}";
+		};
+	};
+	55BC180512212D5100E9A4AE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 55BC17E912212B5900E9A4AE /* appIcon.icns */;
+	};
+	55BC180612212D5100E9A4AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55BC16B512210E3D00E9A4AE /* PTHotKeyCenter.m */;
+		name = "PTHotKeyCenter.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 881;
+		vrLoc = 0;
+	};
+	55BC187D122141DA00E9A4AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	55BE178311BCFB8300F4E587 /* GetPID.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 5161}}";
+			sepNavSelRange = "{2932, 7}";
+			sepNavVisRange = "{0, 2766}";
+		};
+	};
+	55BE178411BCFB8300F4E587 /* GetPID.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 2249}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2819}";
+		};
+	};
+	55C2FCCB123963300068AB9E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3F00F4B6AF500CF3369 /* Spotify_Menubar_Prefix.pch */;
+		name = "Spotify_Menubar_Prefix.pch: 6";
+		rLen = 0;
+		rLoc = 127;
+		rType = 0;
+		vrLen = 255;
+		vrLoc = 0;
+	};
+	55EC0F9B1215FAC500B076A8 /* Events.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Events.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h;
+		sourceTree = "<absolute>";
+	};
+	55EC0FA41215FBC900B076A8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 55EC0F9B1215FAC500B076A8 /* Events.h */;
+		name = "Events.h: 881";
+		rLen = 105;
+		rLoc = 28418;
+		rType = 0;
+		vrLen = 1034;
+		vrLoc = 27790;
+	};
+	8D1107260486CEB800E47090 /* Spotify Menubar */ = {
+		activeExec = 0;
+		executables = (
+			5544079311BC315C00804FD7 /* Spotify Menubar */,
+		);
+	};
+}
