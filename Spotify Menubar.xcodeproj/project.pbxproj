@@ -18,11 +18,9 @@
 		55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE47C121C3DB100DFAAC1 /* Carbon.framework */; };
 		55AFE5AD121C5AB400DFAAC1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */; };
 		55AFE5B6121C5AB700DFAAC1 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */; };
+		55B1241412F832A00012A986 /* SDGlobalShortcuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */; };
+		55B1241A12F832A50012A986 /* SDGlobalShortcuts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */; };
 		55BC16B112210C5E00E9A4AE /* statusOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC16B012210C5E00E9A4AE /* statusOn.png */; };
-		55BC16BA12210E3D00E9A4AE /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC16B312210E3D00E9A4AE /* PTHotKey.m */; };
-		55BC16BB12210E3D00E9A4AE /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC16B512210E3D00E9A4AE /* PTHotKeyCenter.m */; };
-		55BC16BC12210E3D00E9A4AE /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC16B712210E3D00E9A4AE /* PTKeyCodeTranslator.m */; };
-		55BC16BD12210E3D00E9A4AE /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC16B912210E3D00E9A4AE /* PTKeyCombo.m */; };
 		55BC17A81221203100E9A4AE /* statusHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17A61221203100E9A4AE /* statusHighlight.png */; };
 		55BC17A91221203100E9A4AE /* statusOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17A71221203100E9A4AE /* statusOff.png */; };
 		55BC17EA12212B5900E9A4AE /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17E912212B5900E9A4AE /* appIcon.icns */; };
@@ -40,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				55B1241A12F832A50012A986 /* SDGlobalShortcuts.framework in CopyFiles */,
 				55AFE5B6121C5AB700DFAAC1 /* Sparkle.framework in CopyFiles */,
 				55AFE417121C32E300DFAAC1 /* ShortcutRecorder.framework in CopyFiles */,
 			);
@@ -64,18 +63,10 @@
 		55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = /Users/Northern/DockDesktop/DesktopME/Dev/shortcutrecorder/build/Release/ShortcutRecorder.framework; sourceTree = "<absolute>"; };
 		55AFE47C121C3DB100DFAAC1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDGlobalShortcuts.framework; sourceTree = "<group>"; };
 		55BC16B012210C5E00E9A4AE /* statusOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOn.png; sourceTree = "<group>"; };
-		55BC16B212210E3D00E9A4AE /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKey.h; sourceTree = "<group>"; };
-		55BC16B312210E3D00E9A4AE /* PTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKey.m; sourceTree = "<group>"; };
-		55BC16B412210E3D00E9A4AE /* PTHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKeyCenter.h; sourceTree = "<group>"; };
-		55BC16B512210E3D00E9A4AE /* PTHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKeyCenter.m; sourceTree = "<group>"; };
-		55BC16B612210E3D00E9A4AE /* PTKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCodeTranslator.h; sourceTree = "<group>"; };
-		55BC16B712210E3D00E9A4AE /* PTKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCodeTranslator.m; sourceTree = "<group>"; };
-		55BC16B812210E3D00E9A4AE /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCombo.h; sourceTree = "<group>"; };
-		55BC16B912210E3D00E9A4AE /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCombo.m; sourceTree = "<group>"; };
 		55BC17A61221203100E9A4AE /* statusHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusHighlight.png; sourceTree = "<group>"; };
 		55BC17A71221203100E9A4AE /* statusOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOff.png; sourceTree = "<group>"; };
-		55BC17AA1221204D00E9A4AE /* PTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHeader.h; sourceTree = "<group>"; };
 		55BC17E912212B5900E9A4AE /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
 		55BC180012212C9500E9A4AE /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		55BE178311BCFB8300F4E587 /* GetPID.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GetPID.c; sourceTree = "<group>"; };
@@ -94,6 +85,7 @@
 				55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */,
 				55AFE5AD121C5AB400DFAAC1 /* Sparkle.framework in Frameworks */,
 				55AD79DE12383DE40014B927 /* CoreFoundation.framework in Frameworks */,
+				55B1241412F832A00012A986 /* SDGlobalShortcuts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +106,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */,
 				55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */,
 				55AFE47C121C3DB100DFAAC1 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -144,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
-				55AFE459121C3A7500DFAAC1 /* PTKeyCode */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -183,22 +175,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		55AFE459121C3A7500DFAAC1 /* PTKeyCode */ = {
-			isa = PBXGroup;
-			children = (
-				55BC17AA1221204D00E9A4AE /* PTHeader.h */,
-				55BC16B212210E3D00E9A4AE /* PTHotKey.h */,
-				55BC16B312210E3D00E9A4AE /* PTHotKey.m */,
-				55BC16B412210E3D00E9A4AE /* PTHotKeyCenter.h */,
-				55BC16B512210E3D00E9A4AE /* PTHotKeyCenter.m */,
-				55BC16B612210E3D00E9A4AE /* PTKeyCodeTranslator.h */,
-				55BC16B712210E3D00E9A4AE /* PTKeyCodeTranslator.m */,
-				55BC16B812210E3D00E9A4AE /* PTKeyCombo.h */,
-				55BC16B912210E3D00E9A4AE /* PTKeyCombo.m */,
-			);
-			name = PTKeyCode;
 			sourceTree = "<group>";
 		};
 		55BC169912210C3000E9A4AE /* Images */ = {
@@ -290,10 +266,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				554407B011BC47F500804FD7 /* AppController.m in Sources */,
 				55BE178511BCFB8300F4E587 /* GetPID.c in Sources */,
-				55BC16BA12210E3D00E9A4AE /* PTHotKey.m in Sources */,
-				55BC16BB12210E3D00E9A4AE /* PTHotKeyCenter.m in Sources */,
-				55BC16BC12210E3D00E9A4AE /* PTKeyCodeTranslator.m in Sources */,
-				55BC16BD12210E3D00E9A4AE /* PTKeyCombo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +352,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.4;
 			};
@@ -393,7 +365,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.4;
 			};

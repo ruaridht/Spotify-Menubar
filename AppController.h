@@ -10,10 +10,10 @@
 //	software licence.
 
 #import <Cocoa/Cocoa.h>
-#import "PTHeader.h"
+//#import "PTHeader.h"
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
-//#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
+#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 
 @interface AppController : NSObject {
 	
@@ -46,11 +46,11 @@
 	IBOutlet SRRecorderControl *playPauseRecorder;
 	IBOutlet SRRecorderControl *skipForwardRecorder;
 	IBOutlet SRRecorderControl *skipBackRecorder;
-	
+	/*
 	PTHotKey *playPauseGlobalHotkey;
 	PTHotKey *skipForwardGlobalHotkey;
 	PTHotKey *skipBackGlobalHotkey;
-	
+	*/
 	KeyCombo ppGlobalHotkey;
 	KeyCombo sfGlobalHotkey;
 	KeyCombo sbGlobalHotkey;
@@ -100,9 +100,6 @@
 - (IBAction)syncroniseUserDefaults:(id)sender;
 - (IBAction)openURLLifeUpNorth:(id)sender;
 - (IBAction)sendLUNemail:(id)sender;
-
-- (void)toggleGlobalHotKey:(SRRecorderControl*)sender;
-- (void)shortcutRecorder:(SRRecorderControl *)recorder keyComboDidChange:(KeyCombo)newKeyCombo;
 
 - (void)addAppAsLoginItem;
 - (void)deleteAppFromLoginItem;

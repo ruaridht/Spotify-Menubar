@@ -15,8 +15,8 @@
 #include "GetPID.h"
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
-//#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
-#import "PTHeader.h"
+#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
+//#import "PTHeader.h"
 
 typedef struct kinfo_proc kinfo_proc;
 
@@ -61,6 +61,7 @@ typedef struct kinfo_proc kinfo_proc;
 	[skipForwardRecorder setCanCaptureGlobalHotKeys:YES];
 	[skipBackRecorder setCanCaptureGlobalHotKeys:YES];
 	
+	/*
 	KeyCombo combo1 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)49 };
     if([[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseCode"])
 		combo1.code = [[[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseCode"] intValue];
@@ -79,6 +80,7 @@ typedef struct kinfo_proc kinfo_proc;
     if([[NSUserDefaults standardUserDefaults] objectForKey: @"SkipBackFlags"])
 		combo3.flags = [[[NSUserDefaults standardUserDefaults] objectForKey: @"SkipBackFlags"] intValue];
 	
+	/*
     [playPauseRecorder setDelegate: self];
     [playPauseRecorder setKeyCombo: combo1];
 	
@@ -87,8 +89,8 @@ typedef struct kinfo_proc kinfo_proc;
 	
 	[skipBackRecorder setDelegate: self];
     [skipBackRecorder setKeyCombo: combo3];
+	*/
 	
-	/*
 	SDGlobalShortcutsController *shortcutsController = [SDGlobalShortcutsController sharedShortcutsController];
 	[shortcutsController addShortcutFromDefaultsKey:@"ppGlobalHotkey"
 										withControl:playPauseRecorder
@@ -102,7 +104,13 @@ typedef struct kinfo_proc kinfo_proc;
 										withControl:skipBackRecorder
 											 target:self
 										   selector:@selector(sendSkipBackThreaded)];
+	
+	/*
+	[playPauseRecorder setKeyCombo:combo1];
+	[skipForwardRecorder setKeyCombo:combo2];
+	[skipBackRecorder setKeyCombo:combo3];
 	*/
+	
 	// Welcome Window
 	if ([showWelcomeWindow state] == NSOffState) {
 		[NSApp activateIgnoringOtherApps:YES];
@@ -186,19 +194,25 @@ typedef struct kinfo_proc kinfo_proc;
 - (IBAction)resetKeybinds:(id)sender
 {
 	KeyCombo combo1 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)49 };
+	KeyCombo combo2 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)124 };
+	KeyCombo combo3 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)123 };
+	
+	/*
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo1.code] forKey: @"PlayPauseCode"];
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo1.flags] forKey: @"PlayPauseFlags"];
 	//[self toggleGlobalHotKey: playPauseRecorder];
-		
-	KeyCombo combo2 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)124 };
+	
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo2.code] forKey: @"SkipForwardCode"];
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo2.flags] forKey: @"SkipForwardFlags"];
 	//[self toggleGlobalHotKey: skipForwardRecorder];
 	
-	KeyCombo combo3 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)123 };
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo3.code] forKey: @"SkipBackCode"];
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo3.flags] forKey: @"SkipBackFlags"];
 	//[self toggleGlobalHotKey: skipBackRecorder];
+	*/
+	[playPauseRecorder setKeyCombo:combo1];
+	[skipForwardRecorder setKeyCombo:combo2];
+	[skipBackRecorder setKeyCombo:combo3];
 }
 
 - (IBAction)toggleOpenAtLogin:(id)sender
@@ -724,97 +738,6 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
     return err;
 }
 */
-
-#pragma mark -
-#pragma mark ShortcutRecorder Delegate
-
-- (void)toggleGlobalHotKey:(SRRecorderControl*)sender
-{
-    
-    KeyCombo keyCombo = [sender keyCombo];
-    
-	if (sender == playPauseRecorder) {
-		
-		if (playPauseGlobalHotkey != nil) {
-			[[PTHotKeyCenter sharedCenter] unregisterHotKey: playPauseGlobalHotkey];
-			[playPauseGlobalHotkey release];
-			playPauseGlobalHotkey = nil;
-		}
-		
-		if((keyCombo.code >= 0) && (keyCombo.flags >= 0)) {
-			playPauseGlobalHotkey = [[PTHotKey alloc] initWithIdentifier: @"PlayPauseSpotify"
-																keyCombo: [PTKeyCombo keyComboWithKeyCode: keyCombo.code
-																								modifiers: [sender cocoaToCarbonFlags: keyCombo.flags]]];
-		
-			//[playPauseGlobalHotkey setTarget: playPauseButton];
-			//[playPauseGlobalHotkey setAction: @selector(performClick:)];
-		
-			[playPauseGlobalHotkey setTarget: self];
-			[playPauseGlobalHotkey setAction: @selector(sendPlayPauseThreaded)];
-			
-			[[PTHotKeyCenter sharedCenter] registerHotKey: playPauseGlobalHotkey];
-		}
-	}
-	if (sender == skipForwardRecorder) {
-		
-		if (skipForwardGlobalHotkey != nil) {
-			[[PTHotKeyCenter sharedCenter] unregisterHotKey: skipForwardGlobalHotkey];
-			[skipForwardGlobalHotkey release];
-			skipForwardGlobalHotkey = nil;
-		}
-		
-		if((keyCombo.code >= 0) && (keyCombo.flags >= 0)) {
-			skipForwardGlobalHotkey = [[PTHotKey alloc] initWithIdentifier: @"NextSpotify"
-																keyCombo: [PTKeyCombo keyComboWithKeyCode: keyCombo.code
-																								modifiers: [sender cocoaToCarbonFlags: keyCombo.flags]]];
-			
-			[skipForwardGlobalHotkey setTarget: self];
-			[skipForwardGlobalHotkey setAction: @selector(sendSkipForwardThreaded)];
-			
-			[[PTHotKeyCenter sharedCenter] registerHotKey: skipForwardGlobalHotkey];
-		}
-	}
-	if (sender == skipBackRecorder) {
-		
-		if (skipBackGlobalHotkey != nil) {
-			[[PTHotKeyCenter sharedCenter] unregisterHotKey: skipBackGlobalHotkey];
-			[skipBackGlobalHotkey release];
-			skipBackGlobalHotkey = nil;
-		}
-		
-		if((keyCombo.code >= 0) && (keyCombo.flags >= 0)) {
-			skipBackGlobalHotkey = [[PTHotKey alloc] initWithIdentifier: @"PrevSpotify"
-																keyCombo: [PTKeyCombo keyComboWithKeyCode: keyCombo.code
-																								modifiers: [sender cocoaToCarbonFlags: keyCombo.flags]]];
-			
-			[skipBackGlobalHotkey setTarget: self];
-			[skipBackGlobalHotkey setAction: @selector(sendSkipBackThreaded)];
-			
-			[[PTHotKeyCenter sharedCenter] registerHotKey: skipBackGlobalHotkey];
-		}
-	}
-}
-
-- (void)shortcutRecorder:(SRRecorderControl *)recorder keyComboDidChange:(KeyCombo)newKeyCombo
-{
-    if(recorder == playPauseRecorder) {
-		[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: newKeyCombo.code] forKey: @"PlayPauseCode"];
-		[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: newKeyCombo.flags] forKey: @"PlayPauseFlags"];
-		[self toggleGlobalHotKey: playPauseRecorder];
-    }
-	if(recorder == skipForwardRecorder) {
-		[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: newKeyCombo.code] forKey: @"SkipForwardCode"];
-		[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: newKeyCombo.flags] forKey: @"SkipForwardFlags"];
-		[self toggleGlobalHotKey: skipForwardRecorder];
-    }
-	if(recorder == skipBackRecorder) {
-		[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: newKeyCombo.code] forKey: @"SkipBackCode"];
-		[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: newKeyCombo.flags] forKey: @"SkipBackFlags"];
-		[self toggleGlobalHotKey: skipBackRecorder];
-    }
-	
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
 
 #pragma mark -
 #pragma mark Login Methods
