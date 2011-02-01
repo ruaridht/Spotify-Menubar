@@ -12,19 +12,12 @@
 		554407B011BC47F500804FD7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554407AF11BC47F500804FD7 /* AppController.m */; };
 		555C9C1912E867D1007446C0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1712E867D1007446C0 /* LICENSE */; };
 		555C9C1A12E867D1007446C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1812E867D1007446C0 /* README */; };
-		55AD777912383D460014B927 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD777812383D460014B927 /* libcrypto.dylib */; };
 		55AD79DE12383DE40014B927 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD79DD12383DE40014B927 /* CoreFoundation.framework */; };
-		55AD79E212383DFC0014B927 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD79E112383DFC0014B927 /* ScriptingBridge.framework */; };
-		55AD79EB12383E240014B927 /* Message.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD79EA12383E240014B927 /* Message.framework */; };
-		55AD79EF12383E320014B927 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD79EE12383E320014B927 /* CoreServices.framework */; };
-		55AE93EC1217505800037F42 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AE93E91217505800037F42 /* MAAttachedWindow.m */; };
 		55AFE414121C32E000DFAAC1 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
 		55AFE417121C32E300DFAAC1 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
 		55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE47C121C3DB100DFAAC1 /* Carbon.framework */; };
 		55AFE5AD121C5AB400DFAAC1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */; };
 		55AFE5B6121C5AB700DFAAC1 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */; };
-		55B4DA5912243C190027195F /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B4DA5812243C190027195F /* Growl.framework */; };
-		55B4DA6412243C1E0027195F /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B4DA5812243C190027195F /* Growl.framework */; };
 		55BC16B112210C5E00E9A4AE /* statusOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC16B012210C5E00E9A4AE /* statusOn.png */; };
 		55BC16BA12210E3D00E9A4AE /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC16B312210E3D00E9A4AE /* PTHotKey.m */; };
 		55BC16BB12210E3D00E9A4AE /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC16B512210E3D00E9A4AE /* PTHotKeyCenter.m */; };
@@ -35,30 +28,18 @@
 		55BC17EA12212B5900E9A4AE /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17E912212B5900E9A4AE /* appIcon.icns */; };
 		55BC180112212C9500E9A4AE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17FF12212C9500E9A4AE /* Credits.rtf */; };
 		55BE178511BCFB8300F4E587 /* GetPID.c in Sources */ = {isa = PBXBuildFile; fileRef = 55BE178311BCFB8300F4E587 /* GetPID.c */; };
-		55F957A312391736002D7EBB /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD7E4D123842F80014B927 /* libz.1.2.3.dylib */; };
-		55F957B21239174A002D7EBB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E42FB307B3F0F600E4EEF1 /* CoreData.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		55AFE409121C326C00DFAAC1 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		55AFE430121C344600DFAAC1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				55B4DA6412243C1E0027195F /* Growl.framework in CopyFiles */,
 				55AFE5B6121C5AB700DFAAC1 /* Sparkle.framework in CopyFiles */,
 				55AFE417121C32E300DFAAC1 /* ShortcutRecorder.framework in CopyFiles */,
 			);
@@ -69,7 +50,6 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Spotify_Menubar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify_Menubar_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,18 +60,10 @@
 		554407AF11BC47F500804FD7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		555C9C1712E867D1007446C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		555C9C1812E867D1007446C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		55AD777812383D460014B927 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 		55AD79DD12383DE40014B927 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		55AD79E112383DFC0014B927 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
-		55AD79EA12383E240014B927 /* Message.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Message.framework; path = System/Library/Frameworks/Message.framework; sourceTree = SDKROOT; };
-		55AD79EE12383E320014B927 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
-		55AD7E4D123842F80014B927 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/local/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
-		55AE93E81217505800037F42 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
-		55AE93E91217505800037F42 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
 		55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = /Users/Northern/DockDesktop/DesktopME/Dev/shortcutrecorder/build/Release/ShortcutRecorder.framework; sourceTree = "<absolute>"; };
 		55AFE47C121C3DB100DFAAC1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		55B4DA5812243C190027195F /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		55BC16B012210C5E00E9A4AE /* statusOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOn.png; sourceTree = "<group>"; };
 		55BC16B212210E3D00E9A4AE /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKey.h; sourceTree = "<group>"; };
 		55BC16B312210E3D00E9A4AE /* PTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKey.m; sourceTree = "<group>"; };
@@ -117,18 +89,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F957B21239174A002D7EBB /* CoreData.framework in Frameworks */,
-				55F957A312391736002D7EBB /* libz.1.2.3.dylib in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				55AFE414121C32E000DFAAC1 /* ShortcutRecorder.framework in Frameworks */,
 				55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */,
 				55AFE5AD121C5AB400DFAAC1 /* Sparkle.framework in Frameworks */,
-				55B4DA5912243C190027195F /* Growl.framework in Frameworks */,
-				55AD777912383D460014B927 /* libcrypto.dylib in Frameworks */,
 				55AD79DE12383DE40014B927 /* CoreFoundation.framework in Frameworks */,
-				55AD79E212383DFC0014B927 /* ScriptingBridge.framework in Frameworks */,
-				55AD79EB12383E240014B927 /* Message.framework in Frameworks */,
-				55AD79EF12383E320014B927 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +107,6 @@
 				554407AF11BC47F500804FD7 /* AppController.m */,
 				55BE178311BCFB8300F4E587 /* GetPID.c */,
 				55BE178411BCFB8300F4E587 /* GetPID.h */,
-				55AE93E81217505800037F42 /* MAAttachedWindow.h */,
-				55AE93E91217505800037F42 /* MAAttachedWindow.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -152,13 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */,
-				55AD777812383D460014B927 /* libcrypto.dylib */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				55AD79E112383DFC0014B927 /* ScriptingBridge.framework */,
-				55AD79EA12383E240014B927 /* Message.framework */,
 				55AFE47C121C3DB100DFAAC1 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				55AD79EE12383E320014B927 /* CoreServices.framework */,
 				55AD79DD12383DE40014B927 /* CoreFoundation.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
@@ -170,8 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */,
-				55B4DA5812243C190027195F /* Growl.framework */,
-				55AD7E4D123842F80014B927 /* libz.1.2.3.dylib */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -264,7 +220,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Spotify Menubar" */;
 			buildPhases = (
-				55AFE409121C326C00DFAAC1 /* CopyFiles */,
 				55AFE430121C344600DFAAC1 /* CopyFiles */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -335,7 +290,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				554407B011BC47F500804FD7 /* AppController.m in Sources */,
 				55BE178511BCFB8300F4E587 /* GetPID.c in Sources */,
-				55AE93EC1217505800037F42 /* MAAttachedWindow.m in Sources */,
 				55BC16BA12210E3D00E9A4AE /* PTHotKey.m in Sources */,
 				55BC16BB12210E3D00E9A4AE /* PTHotKeyCenter.m in Sources */,
 				55BC16BC12210E3D00E9A4AE /* PTKeyCodeTranslator.m in Sources */,

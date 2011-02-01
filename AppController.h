@@ -10,7 +10,6 @@
 //	software licence.
 
 #import <Cocoa/Cocoa.h>
-#import "MAAttachedWindow.h"
 #import "PTHeader.h"
 
 #import <ShortcutRecorder/ShortcutRecorder.h>

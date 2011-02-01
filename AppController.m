@@ -25,7 +25,6 @@
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
 #import "PTHeader.h"
-#import <Growl/Growl.h>
 
 #define SPOTIFY_TRACK @"http://ws.spotify.com/lookup/1/?uri="
 
@@ -140,13 +139,6 @@ typedef struct kinfo_proc kinfo_proc;
 - (NSOperationQueue *)operationQueue
 {
 	return queue;
-}
-
-- (NSDictionary *)registrationDictionaryForGrowl
-{
-	NSArray *objects = [NSArray arrayWithObjects:@"Skip Forward Change", @"Skip Back Change", @"Play / Pause Change", nil];
-	NSDictionary *growlReg = [NSDictionary dictionaryWithObjectsAndKeys: @"Spotify Menubar", GROWL_APP_NAME, objects, GROWL_NOTIFICATIONS_ALL, objects, GROWL_NOTIFICATIONS_DEFAULT, nil];
-	return growlReg;
 }
 
 - (void)checkIsSpotifyActive
