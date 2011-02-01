@@ -10,7 +10,6 @@
 //	software licence.
 
 #import <Cocoa/Cocoa.h>
-//#import "PTHeader.h"
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
 #import <SDGlobalShortcuts/SDGlobalShortcuts.h>
@@ -46,11 +45,7 @@
 	IBOutlet SRRecorderControl *playPauseRecorder;
 	IBOutlet SRRecorderControl *skipForwardRecorder;
 	IBOutlet SRRecorderControl *skipBackRecorder;
-	/*
-	PTHotKey *playPauseGlobalHotkey;
-	PTHotKey *skipForwardGlobalHotkey;
-	PTHotKey *skipBackGlobalHotkey;
-	*/
+
 	KeyCombo ppGlobalHotkey;
 	KeyCombo sfGlobalHotkey;
 	KeyCombo sbGlobalHotkey;

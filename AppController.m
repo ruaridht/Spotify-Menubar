@@ -16,7 +16,6 @@
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
 #import <SDGlobalShortcuts/SDGlobalShortcuts.h>
-//#import "PTHeader.h"
 
 typedef struct kinfo_proc kinfo_proc;
 
@@ -61,36 +60,6 @@ typedef struct kinfo_proc kinfo_proc;
 	[skipForwardRecorder setCanCaptureGlobalHotKeys:YES];
 	[skipBackRecorder setCanCaptureGlobalHotKeys:YES];
 	
-	/*
-	KeyCombo combo1 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)49 };
-    if([[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseCode"])
-		combo1.code = [[[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseCode"] intValue];
-    if([[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseFlags"])
-		combo1.flags = [[[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseFlags"] intValue];
-	
-	KeyCombo combo2 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)124 };
-    if([[NSUserDefaults standardUserDefaults] objectForKey: @"SkipForwardCode"])
-		combo2.code = [[[NSUserDefaults standardUserDefaults] objectForKey: @"SkipForwardCode"] intValue];
-    if([[NSUserDefaults standardUserDefaults] objectForKey: @"SkipForwardFlags"])
-		combo2.flags = [[[NSUserDefaults standardUserDefaults] objectForKey: @"SkipForwardFlags"] intValue];
-	
-	KeyCombo combo3 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)123 };
-    if([[NSUserDefaults standardUserDefaults] objectForKey: @"SkipBackCode"])
-		combo3.code = [[[NSUserDefaults standardUserDefaults] objectForKey: @"SkipBackCode"] intValue];
-    if([[NSUserDefaults standardUserDefaults] objectForKey: @"SkipBackFlags"])
-		combo3.flags = [[[NSUserDefaults standardUserDefaults] objectForKey: @"SkipBackFlags"] intValue];
-	
-	/*
-    [playPauseRecorder setDelegate: self];
-    [playPauseRecorder setKeyCombo: combo1];
-	
-	[skipForwardRecorder setDelegate: self];
-    [skipForwardRecorder setKeyCombo: combo2];
-	
-	[skipBackRecorder setDelegate: self];
-    [skipBackRecorder setKeyCombo: combo3];
-	*/
-	
 	SDGlobalShortcutsController *shortcutsController = [SDGlobalShortcutsController sharedShortcutsController];
 	[shortcutsController addShortcutFromDefaultsKey:@"ppGlobalHotkey"
 										withControl:playPauseRecorder
@@ -104,12 +73,6 @@ typedef struct kinfo_proc kinfo_proc;
 										withControl:skipBackRecorder
 											 target:self
 										   selector:@selector(sendSkipBackThreaded)];
-	
-	/*
-	[playPauseRecorder setKeyCombo:combo1];
-	[skipForwardRecorder setKeyCombo:combo2];
-	[skipBackRecorder setKeyCombo:combo3];
-	*/
 	
 	// Welcome Window
 	if ([showWelcomeWindow state] == NSOffState) {
@@ -197,19 +160,6 @@ typedef struct kinfo_proc kinfo_proc;
 	KeyCombo combo2 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)124 };
 	KeyCombo combo3 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)123 };
 	
-	/*
-	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo1.code] forKey: @"PlayPauseCode"];
-	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo1.flags] forKey: @"PlayPauseFlags"];
-	//[self toggleGlobalHotKey: playPauseRecorder];
-	
-	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo2.code] forKey: @"SkipForwardCode"];
-	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo2.flags] forKey: @"SkipForwardFlags"];
-	//[self toggleGlobalHotKey: skipForwardRecorder];
-	
-	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo3.code] forKey: @"SkipBackCode"];
-	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo3.flags] forKey: @"SkipBackFlags"];
-	//[self toggleGlobalHotKey: skipBackRecorder];
-	*/
 	[playPauseRecorder setKeyCombo:combo1];
 	[skipForwardRecorder setKeyCombo:combo2];
 	[skipBackRecorder setKeyCombo:combo3];
