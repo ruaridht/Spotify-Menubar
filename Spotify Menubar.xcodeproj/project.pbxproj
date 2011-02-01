@@ -12,7 +12,6 @@
 		554407B011BC47F500804FD7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554407AF11BC47F500804FD7 /* AppController.m */; };
 		555C9C1912E867D1007446C0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1712E867D1007446C0 /* LICENSE */; };
 		555C9C1A12E867D1007446C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1812E867D1007446C0 /* README */; };
-		55AD79DE12383DE40014B927 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AD79DD12383DE40014B927 /* CoreFoundation.framework */; };
 		55AFE414121C32E000DFAAC1 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
 		55AFE417121C32E300DFAAC1 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
 		55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE47C121C3DB100DFAAC1 /* Carbon.framework */; };
@@ -59,7 +58,6 @@
 		554407AF11BC47F500804FD7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		555C9C1712E867D1007446C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		555C9C1812E867D1007446C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		55AD79DD12383DE40014B927 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = /Users/Northern/DockDesktop/DesktopME/Dev/shortcutrecorder/build/Release/ShortcutRecorder.framework; sourceTree = "<absolute>"; };
 		55AFE47C121C3DB100DFAAC1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				55AFE414121C32E000DFAAC1 /* ShortcutRecorder.framework in Frameworks */,
 				55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */,
 				55AFE5AD121C5AB400DFAAC1 /* Sparkle.framework in Frameworks */,
-				55AD79DE12383DE40014B927 /* CoreFoundation.framework in Frameworks */,
 				55B1241412F832A00012A986 /* SDGlobalShortcuts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +107,6 @@
 				55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */,
 				55AFE47C121C3DB100DFAAC1 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				55AD79DD12383DE40014B927 /* CoreFoundation.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 			);
