@@ -10,23 +10,13 @@
 //	software licence.
 
 #import "AppController.h"
-
-#import <string.h>
-#import <assert.h>
-#import <errno.h>
-#import <stdbool.h>
 #import <sys/sysctl.h>
-#import <stdio.h>
-#import <stdlib.h>
-#import <CoreServices/CoreServices.h>
-#import <Carbon/Carbon.h>
 
 #include "GetPID.h"
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
+//#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 #import "PTHeader.h"
-
-#define SPOTIFY_TRACK @"http://ws.spotify.com/lookup/1/?uri="
 
 typedef struct kinfo_proc kinfo_proc;
 
@@ -47,10 +37,6 @@ typedef struct kinfo_proc kinfo_proc;
 	
 	[NSApp setDelegate:self];
 	queue = [[NSOperationQueue alloc] init];
-	
-	//[GrowlApplicationBridge setGrowlDelegate:self];
-	
-	[[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotification:) name:@"RTSpotifyNowPlaying" object:nil suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
 	
 	spotifyChecker = [NSTimer scheduledTimerWithTimeInterval:10.0 target: self selector: @selector(checkIsSpotifyActive) userInfo:nil repeats:YES];
 	
@@ -76,7 +62,6 @@ typedef struct kinfo_proc kinfo_proc;
 	[skipBackRecorder setCanCaptureGlobalHotKeys:YES];
 	
 	KeyCombo combo1 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)49 };
-	
     if([[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseCode"])
 		combo1.code = [[[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseCode"] intValue];
     if([[NSUserDefaults standardUserDefaults] objectForKey: @"PlayPauseFlags"])
@@ -103,6 +88,21 @@ typedef struct kinfo_proc kinfo_proc;
 	[skipBackRecorder setDelegate: self];
     [skipBackRecorder setKeyCombo: combo3];
 	
+	/*
+	SDGlobalShortcutsController *shortcutsController = [SDGlobalShortcutsController sharedShortcutsController];
+	[shortcutsController addShortcutFromDefaultsKey:@"ppGlobalHotkey"
+										withControl:playPauseRecorder
+											 target:self
+										   selector:@selector(sendPlayPauseThreaded)];
+	[shortcutsController addShortcutFromDefaultsKey:@"sfGlobalHotkey"
+										withControl:skipForwardRecorder
+											 target:self
+										   selector:@selector(sendSkipForwardThreaded)];
+	[shortcutsController addShortcutFromDefaultsKey:@"sbGlobalHotkey"
+										withControl:skipBackRecorder
+											 target:self
+										   selector:@selector(sendSkipBackThreaded)];
+	*/
 	// Welcome Window
 	if ([showWelcomeWindow state] == NSOffState) {
 		[NSApp activateIgnoringOtherApps:YES];
@@ -163,12 +163,6 @@ typedef struct kinfo_proc kinfo_proc;
 
 }
 
-- (void)receivedNotification:(NSNotification *)aNote
-{
-	NSLog(@"We've recieved the notification in SM! :o");
-	NSLog(@"%@", aNote);
-}
-
 #pragma mark -
 #pragma mark IBActions
 
@@ -194,17 +188,17 @@ typedef struct kinfo_proc kinfo_proc;
 	KeyCombo combo1 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)49 };
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo1.code] forKey: @"PlayPauseCode"];
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo1.flags] forKey: @"PlayPauseFlags"];
-	[self toggleGlobalHotKey: playPauseRecorder];
+	//[self toggleGlobalHotKey: playPauseRecorder];
 		
 	KeyCombo combo2 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)124 };
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo2.code] forKey: @"SkipForwardCode"];
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo2.flags] forKey: @"SkipForwardFlags"];
-	[self toggleGlobalHotKey: skipForwardRecorder];
+	//[self toggleGlobalHotKey: skipForwardRecorder];
 	
 	KeyCombo combo3 = { (NSShiftKeyMask | NSAlternateKeyMask), (CGKeyCode)123 };
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo3.code] forKey: @"SkipBackCode"];
 	[[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInt: combo3.flags] forKey: @"SkipBackFlags"];
-	[self toggleGlobalHotKey: skipBackRecorder];
+	//[self toggleGlobalHotKey: skipBackRecorder];
 }
 
 - (IBAction)toggleOpenAtLogin:(id)sender
@@ -918,14 +912,6 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 			[manager setAttributes:[NSDictionary dictionaryWithObject:[NSDate date] forKey:NSFileModificationDate] ofItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
 		}
 	}
-}
-
-#pragma mark -
-#pragma mark Pasteboard Stuff
-
-- (void)updateNowPlaying
-{
-	
 }
 
 @end

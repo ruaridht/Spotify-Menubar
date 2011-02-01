@@ -13,6 +13,7 @@
 #import "PTHeader.h"
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
+//#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 
 @interface AppController : NSObject {
 	
@@ -49,6 +50,10 @@
 	PTHotKey *playPauseGlobalHotkey;
 	PTHotKey *skipForwardGlobalHotkey;
 	PTHotKey *skipBackGlobalHotkey;
+	
+	KeyCombo ppGlobalHotkey;
+	KeyCombo sfGlobalHotkey;
+	KeyCombo sbGlobalHotkey;
 	
 	IBOutlet NSButton *showDockIcon;
 	IBOutlet NSButton *openAtLogin;
@@ -104,7 +109,5 @@
 - (IBAction)setApplicationIsAgent:(id)sender;
 - (BOOL)shouldBeUIElement;
 - (void)setShouldBeUIElement:(BOOL)hidden;
-
-- (void)updateNowPlaying;
 
 @end
