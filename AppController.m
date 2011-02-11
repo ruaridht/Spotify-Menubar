@@ -115,7 +115,7 @@ typedef struct kinfo_proc kinfo_proc;
 - (void)checkIsSpotifyActive
 {
 	if (![self isSpotifyActive]) {
-		[statusItem setImage:[NSImage imageNamed:@"statusOff.png"]];
+		[statusItem setImage:[NSImage imageNamed:@"statusOffGrey.png"]];
 	} else {
 		[statusItem setImage:[NSImage imageNamed:@"statusOn.png"]];
 	}

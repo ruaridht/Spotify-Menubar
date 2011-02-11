@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		55148D131222F21A006BDA27 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55148D121222F21A006BDA27 /* welcome.jpg */; };
+		551938D81305863200808B2F /* statusOffGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 551938D71305863200808B2F /* statusOffGrey.png */; };
 		554407B011BC47F500804FD7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554407AF11BC47F500804FD7 /* AppController.m */; };
 		555C9C1912E867D1007446C0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1712E867D1007446C0 /* LICENSE */; };
 		555C9C1A12E867D1007446C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1812E867D1007446C0 /* README */; };
@@ -54,6 +55,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		55148D121222F21A006BDA27 /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpg; sourceTree = "<group>"; };
+		551938D71305863200808B2F /* statusOffGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOffGrey.png; sourceTree = "<group>"; };
 		554407AE11BC47F500804FD7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		554407AF11BC47F500804FD7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		555C9C1712E867D1007446C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				55BC17E912212B5900E9A4AE /* appIcon.icns */,
 				55BC17A61221203100E9A4AE /* statusHighlight.png */,
 				55BC17A71221203100E9A4AE /* statusOff.png */,
+				551938D71305863200808B2F /* statusOffGrey.png */,
 				55BC16B012210C5E00E9A4AE /* statusOn.png */,
 			);
 			name = Images;
@@ -249,6 +252,7 @@
 				55148D131222F21A006BDA27 /* welcome.jpg in Resources */,
 				555C9C1912E867D1007446C0 /* LICENSE in Resources */,
 				555C9C1A12E867D1007446C0 /* README in Resources */,
+				551938D81305863200808B2F /* statusOffGrey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,12 +347,12 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				SDKROOT = macosx10.4;
 			};
@@ -357,11 +361,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				SDKROOT = macosx10.4;
 			};
