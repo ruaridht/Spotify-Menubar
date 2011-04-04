@@ -33,6 +33,9 @@
 	
 	// Status menu stuff
 	NSStatusItem *statusItem;
+	NSStatusItem *playItem;
+	NSStatusItem *fwrdItem;
+	NSStatusItem *backItem;
 	
 	IBOutlet NSView *statusView;
 	IBOutlet NSMenu *statusMenu;
@@ -51,6 +54,7 @@
 	KeyCombo sbGlobalHotkey;
 	
 	IBOutlet NSButton *showDockIcon;
+	IBOutlet NSButton *showMenubarIcon;
 	IBOutlet NSButton *openAtLogin;
 	IBOutlet NSButton *showWelcomeWindow;
 	IBOutlet NSButton *openSpotifyOnLaunch;
@@ -60,6 +64,29 @@
 	IBOutlet NSButton *playPauseButton;
 	IBOutlet NSButton *skipForwardButton;
 	IBOutlet NSButton *skipBackButton;
+	
+	// Preferences Stuff
+	IBOutlet NSWindow *prefWindow;
+	
+	NSView *currentView;
+	IBOutlet NSView *prefContentView;
+	
+	IBOutlet NSView *generalView;
+	IBOutlet NSView *shortcutsView;
+	IBOutlet NSView *advancedView;
+	IBOutlet NSView *helpView;
+	IBOutlet NSView *aboutView;
+	IBOutlet NSView *simbleView;
+	
+	IBOutlet NSToolbar *prefToolbar;
+	IBOutlet NSToolbarItem *generalToolbarItem;
+	IBOutlet NSToolbarItem *shortcutsToolbarItem;
+	IBOutlet NSToolbarItem *advancedToolbarItem;
+	IBOutlet NSToolbarItem *helpToolbarItem;
+	IBOutlet NSToolbarItem *aboutToolbarItem;
+	IBOutlet NSToolbarItem *simblToolbarItem;
+	
+	IBOutlet NSPopUpButton *menubarIconStyle;
 	
 }
 
@@ -86,6 +113,12 @@
 - (IBAction)openSpotifyPreferences:(id)sender;
 - (IBAction)resetKeybinds:(id)sender;
 - (IBAction)toggleOpenAtLogin:(id)sender;
+- (IBAction)toggleMiniControls:(id)sender;
+- (IBAction)switchMenubarIconStyle:(id)sender;
+
+- (IBAction)openAboutWindow:(id)sender;
+- (IBAction)switchPreferenceView:(id)sender;
+- (void)loadView:(NSView *)theView;
 
 - (IBAction)sendPlayPause:(id)sender;
 - (IBAction)sendSkipForward:(id)sender;
@@ -95,7 +128,10 @@
 - (IBAction)syncroniseUserDefaults:(id)sender;
 - (IBAction)openURLLifeUpNorth:(id)sender;
 - (IBAction)sendLUNemail:(id)sender;
+- (IBAction)openUrlSimbl:(id)sender;
+- (IBAction)openUrlLunPlugin:(id)sender;
 
+- (void)setStatusItem;
 - (void)addAppAsLoginItem;
 - (void)deleteAppFromLoginItem;
 - (IBAction)setApplicationIsAgent:(id)sender;

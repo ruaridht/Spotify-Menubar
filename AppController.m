@@ -38,24 +38,18 @@ typedef struct kinfo_proc kinfo_proc;
 	queue = [[NSOperationQueue alloc] init];
 	
 	spotifyChecker = [NSTimer scheduledTimerWithTimeInterval:10.0 target: self selector: @selector(checkIsSpotifyActive) userInfo:nil repeats:YES];
-	
-    return self;
+	//[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showMenubarIcon"];
+    
+	return self;
 }
 
 - (void)awakeFromNib
 {
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"runAsUIAgent"]) {
-		// Create an NSStatusItem.
-		float width = 25.0;
-		statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
-		[statusItem setMenu:statusMenu];
-		[statusItem setImage:[NSImage imageNamed:@"statusOn.png"]];
-		[statusItem setAlternateImage:[NSImage imageNamed:@"statusHighlight.png"]];
-		[statusItem setHighlightMode:YES];
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showMenubarIcon"]) {
+		[self setStatusItem];
 	}
 	
 	// Shortcut Recorders
-	
 	[playPauseRecorder setCanCaptureGlobalHotKeys:YES];
 	[skipForwardRecorder setCanCaptureGlobalHotKeys:YES];
 	[skipBackRecorder setCanCaptureGlobalHotKeys:YES];
@@ -89,6 +83,12 @@ typedef struct kinfo_proc kinfo_proc;
 		[[NSWorkspace sharedWorkspace] launchApplication:@"Spotify"];
 	}
 	
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showMiniControls"]) {
+		[self toggleMiniControls:nil];
+	}
+	
+	// Setup the preferences window.
+	[self loadView:generalView];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
@@ -115,11 +115,14 @@ typedef struct kinfo_proc kinfo_proc;
 - (void)checkIsSpotifyActive
 {
 	if (![self isSpotifyActive]) {
-		[statusItem setImage:[NSImage imageNamed:@"statusOffGrey.png"]];
+		if ([[menubarIconStyle selectedItem] tag] == 1) {
+			[statusItem setImage:[NSImage imageNamed:@"statusOff.png"]];
+		} else {
+			[statusItem setImage:[NSImage imageNamed:@"statusOffGrey.png"]];
+		}
 	} else {
 		[statusItem setImage:[NSImage imageNamed:@"statusOn.png"]];
 	}
-	
 }
 
 - (BOOL)isSpotifyActive
@@ -131,18 +134,62 @@ typedef struct kinfo_proc kinfo_proc;
 	} else {
 		return YES;
 	}
-
 }
 
 #pragma mark -
 #pragma mark IBActions
 
+- (IBAction)switchMenubarIconStyle:(id)sender
+{
+	[self checkIsSpotifyActive];
+}
+
+- (IBAction)switchPreferenceView:(id)sender
+{
+	[prefToolbar setSelectedItemIdentifier:[sender itemIdentifier]];
+	
+	if ([sender tag] == 0) {
+		[self loadView: generalView];
+	} else if ([sender tag] == 1) {
+		[self loadView: shortcutsView];
+	} else if ([sender tag] == 2) {
+		[self loadView: advancedView];
+	} else if ([sender tag] == 3) {
+		[self loadView: helpView];
+	} else if ([sender tag] == 4) {
+		[self loadView: aboutView];
+	} else if ([sender tag] == 5) {
+		[self loadView: simbleView];
+	}
+}
+
+- (void)loadView:(NSView *)theView
+{
+	NSView *tempView = [[NSView alloc] initWithFrame: [[prefWindow contentView] frame]];
+    [prefWindow setContentView: tempView];
+    [tempView release];
+	
+	NSRect newFrame = [prefWindow frame];
+    newFrame.size.height =	[theView frame].size.height + ([prefWindow frame].size.height - [[prefWindow contentView] frame].size.height); // Compensates for toolbar
+    newFrame.size.width =	[theView frame].size.width;
+    newFrame.origin.y +=	([[prefWindow contentView] frame].size.height - [theView frame].size.height); // Origin moves by difference in two views
+    newFrame.origin.x +=	([[prefWindow contentView] frame].size.width - newFrame.size.width)/2; // Origin moves by difference in two views, halved to keep center alignment
+    
+	[prefWindow setFrame: newFrame display: YES animate: YES];
+    [prefWindow setContentView: theView];
+}
+
+- (IBAction)openAboutWindow:(id)sender
+{
+	[self loadView:aboutView];
+	[self openPreferences:self];
+}
+
 - (IBAction)openPreferences:(id)sender
 {
 	//[preferencesWindow makeKeyAndOrderFront:NULL];
 	[NSApp activateIgnoringOtherApps:YES];
-	[preferencesWindow makeKeyAndOrderFront:self];
-	
+	[prefWindow makeKeyAndOrderFront:self];
 }
 
 - (IBAction)openSpotifyPreferences:(id)sender
@@ -172,7 +219,46 @@ typedef struct kinfo_proc kinfo_proc;
 	} else {
 		[self deleteAppFromLoginItem];
 	}
+}
 
+- (IBAction)toggleMiniControls:(id)sender
+{
+	float width = 25.0;
+	
+	if ( !playItem ) {
+		fwrdItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+		playItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+		backItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+		
+		[playItem setImage:[NSImage imageNamed:@"mini-play-up"]];
+		[playItem setAlternateImage:[NSImage imageNamed:@"mini-play-down"]];
+		[playItem setHighlightMode:NO];
+		[playItem setTarget:self];
+		[playItem setAction:@selector(sendPlayPauseThreaded)];
+		
+		[fwrdItem setImage:[NSImage imageNamed:@"mini-fwrd-up"]];
+		[fwrdItem setAlternateImage:[NSImage imageNamed:@"mini-fwrd-down"]];
+		[fwrdItem setHighlightMode:NO];
+		[fwrdItem setTarget:self];
+		[fwrdItem setAction:@selector(sendSkipForwardThreaded)];
+		
+		[backItem setImage:[NSImage imageNamed:@"mini-back-up"]];
+		[backItem setAlternateImage:[NSImage imageNamed:@"mini-back-down"]];
+		[backItem setHighlightMode:NO];
+		[backItem setTarget:self];
+		[backItem setAction:@selector(sendSkipBackThreaded)];
+		
+	} else {
+		[playItem release];
+		playItem = nil;
+		
+		[fwrdItem release];
+		fwrdItem = nil;
+		
+		[backItem release];
+		backItem = nil;
+	}
+	
 }
 
 - (IBAction)checkForProcesses:(id)sender
@@ -246,7 +332,15 @@ typedef struct kinfo_proc kinfo_proc;
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"mailto:lifeupnorth@me.com"]];
 }
 
+- (IBAction)openUrlSimbl:(id)sender
+{
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.culater.net/software/SIMBL/SIMBL.php"]];
+}
 
+- (IBAction)openUrlLunPlugin:(id)sender
+{
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://lifeupnorth.co.uk/lun/#5"]];
+}
 
 #pragma mark -
 #pragma mark KeyEvents
@@ -756,15 +850,30 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 #pragma mark -
 #pragma mark Preferences
 
+- (void)setStatusItem
+{
+	// Create an NSStatusItem.
+	float width = 25.0;
+	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+	[statusItem setMenu:statusMenu];
+	[statusItem setImage:[NSImage imageNamed:@"statusOffGrey.png"]];
+	[statusItem setAlternateImage:[NSImage imageNamed:@"statusHighlight.png"]];
+	[statusItem setHighlightMode:YES];
+	
+}
+
 - (IBAction)setApplicationIsAgent:(id)sender
 {
-	if (![showDockIcon state]) {
-		NSLog(@"Show Dock Icon");
+	if (![[NSUserDefaults standardUserDefaults] boolForKey:@"runAsUIAgent"]) {
+		//NSLog(@"Show Dock Icon");
 		[self setShouldBeUIElement:NO];
-		
+		[showMenubarIcon setEnabled:YES];
 	} else {
-		NSLog(@"Hide Dock Icon");
+		//NSLog(@"Hide Dock Icon");
 		[self setShouldBeUIElement:YES];
+		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showMenubarIcon"];
+		[showMenubarIcon setEnabled:NO];
+		[showMenubarIcon setState:1];
 	}
 }
 

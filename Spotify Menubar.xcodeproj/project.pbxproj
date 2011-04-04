@@ -10,9 +10,23 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		55148D131222F21A006BDA27 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55148D121222F21A006BDA27 /* welcome.jpg */; };
 		551938D81305863200808B2F /* statusOffGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 551938D71305863200808B2F /* statusOffGrey.png */; };
+		55350591134761040032BAE4 /* mini-fwrd-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 55350588134761030032BAE4 /* mini-fwrd-down.png */; };
+		55350592134761040032BAE4 /* mini-fwrd-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 55350589134761030032BAE4 /* mini-fwrd-up.png */; };
+		55350593134761040032BAE4 /* mini-back-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058A134761030032BAE4 /* mini-back-down.png */; };
+		55350594134761040032BAE4 /* mini-back-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058B134761030032BAE4 /* mini-back-up.png */; };
+		55350595134761040032BAE4 /* mini-pause-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058C134761040032BAE4 /* mini-pause-down.png */; };
+		55350596134761040032BAE4 /* mini-pause-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058D134761040032BAE4 /* mini-pause-up.png */; };
+		55350597134761040032BAE4 /* mini-play-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058E134761040032BAE4 /* mini-play-up.png */; };
+		55350598134761040032BAE4 /* mini-controls.psd in Resources */ = {isa = PBXBuildFile; fileRef = 5535058F134761040032BAE4 /* mini-controls.psd */; };
+		55350599134761040032BAE4 /* mini-play-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 55350590134761040032BAE4 /* mini-play-down.png */; };
+		553508A0134917720032BAE4 /* KEXT.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5535089F134917720032BAE4 /* KEXT.icns */; };
 		554407B011BC47F500804FD7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554407AF11BC47F500804FD7 /* AppController.m */; };
 		555C9C1912E867D1007446C0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1712E867D1007446C0 /* LICENSE */; };
 		555C9C1A12E867D1007446C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1812E867D1007446C0 /* README */; };
+		55AEAFD613436D4B00174BE0 /* Keyboard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55AEAFD413436D4B00174BE0 /* Keyboard.icns */; };
+		55AEAFD713436D4B00174BE0 /* PTKeyboardIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 55AEAFD513436D4B00174BE0 /* PTKeyboardIcon.tiff */; };
+		55AEAFD913436EA900174BE0 /* Family.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55AEAFD813436EA900174BE0 /* Family.icns */; };
+		55AEB00D1343734800174BE0 /* UIDivider.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AEB00C1343734800174BE0 /* UIDivider.png */; };
 		55AFE414121C32E000DFAAC1 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
 		55AFE417121C32E300DFAAC1 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
 		55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE47C121C3DB100DFAAC1 /* Carbon.framework */; };
@@ -56,10 +70,24 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		55148D121222F21A006BDA27 /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpg; sourceTree = "<group>"; };
 		551938D71305863200808B2F /* statusOffGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOffGrey.png; sourceTree = "<group>"; };
+		55350588134761030032BAE4 /* mini-fwrd-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-fwrd-down.png"; sourceTree = "<group>"; };
+		55350589134761030032BAE4 /* mini-fwrd-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-fwrd-up.png"; sourceTree = "<group>"; };
+		5535058A134761030032BAE4 /* mini-back-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-back-down.png"; sourceTree = "<group>"; };
+		5535058B134761030032BAE4 /* mini-back-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-back-up.png"; sourceTree = "<group>"; };
+		5535058C134761040032BAE4 /* mini-pause-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-pause-down.png"; sourceTree = "<group>"; };
+		5535058D134761040032BAE4 /* mini-pause-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-pause-up.png"; sourceTree = "<group>"; };
+		5535058E134761040032BAE4 /* mini-play-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-play-up.png"; sourceTree = "<group>"; };
+		5535058F134761040032BAE4 /* mini-controls.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mini-controls.psd"; sourceTree = "<group>"; };
+		55350590134761040032BAE4 /* mini-play-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-play-down.png"; sourceTree = "<group>"; };
+		5535089F134917720032BAE4 /* KEXT.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = KEXT.icns; sourceTree = "<group>"; };
 		554407AE11BC47F500804FD7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		554407AF11BC47F500804FD7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		555C9C1712E867D1007446C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		555C9C1812E867D1007446C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		55AEAFD413436D4B00174BE0 /* Keyboard.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Keyboard.icns; sourceTree = "<group>"; };
+		55AEAFD513436D4B00174BE0 /* PTKeyboardIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PTKeyboardIcon.tiff; sourceTree = "<group>"; };
+		55AEAFD813436EA900174BE0 /* Family.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Family.icns; sourceTree = "<group>"; };
+		55AEB00C1343734800174BE0 /* UIDivider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIDivider.png; sourceTree = "<group>"; };
 		55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = /Users/Northern/DockDesktop/DesktopME/Dev/shortcutrecorder/build/Release/ShortcutRecorder.framework; sourceTree = "<absolute>"; };
 		55AFE47C121C3DB100DFAAC1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -175,9 +203,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		55350587134760F80032BAE4 /* Mini Controls */ = {
+			isa = PBXGroup;
+			children = (
+				55350588134761030032BAE4 /* mini-fwrd-down.png */,
+				55350589134761030032BAE4 /* mini-fwrd-up.png */,
+				5535058A134761030032BAE4 /* mini-back-down.png */,
+				5535058B134761030032BAE4 /* mini-back-up.png */,
+				5535058C134761040032BAE4 /* mini-pause-down.png */,
+				5535058D134761040032BAE4 /* mini-pause-up.png */,
+				5535058E134761040032BAE4 /* mini-play-up.png */,
+				5535058F134761040032BAE4 /* mini-controls.psd */,
+				55350590134761040032BAE4 /* mini-play-down.png */,
+			);
+			name = "Mini Controls";
+			sourceTree = "<group>";
+		};
 		55BC169912210C3000E9A4AE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				55350587134760F80032BAE4 /* Mini Controls */,
+				55AEB00C1343734800174BE0 /* UIDivider.png */,
+				5535089F134917720032BAE4 /* KEXT.icns */,
+				55AEAFD813436EA900174BE0 /* Family.icns */,
+				55AEAFD413436D4B00174BE0 /* Keyboard.icns */,
+				55AEAFD513436D4B00174BE0 /* PTKeyboardIcon.tiff */,
 				55148D121222F21A006BDA27 /* welcome.jpg */,
 				55BC17E912212B5900E9A4AE /* appIcon.icns */,
 				55BC17A61221203100E9A4AE /* statusHighlight.png */,
@@ -253,6 +303,20 @@
 				555C9C1912E867D1007446C0 /* LICENSE in Resources */,
 				555C9C1A12E867D1007446C0 /* README in Resources */,
 				551938D81305863200808B2F /* statusOffGrey.png in Resources */,
+				55AEAFD613436D4B00174BE0 /* Keyboard.icns in Resources */,
+				55AEAFD713436D4B00174BE0 /* PTKeyboardIcon.tiff in Resources */,
+				55AEAFD913436EA900174BE0 /* Family.icns in Resources */,
+				55AEB00D1343734800174BE0 /* UIDivider.png in Resources */,
+				55350591134761040032BAE4 /* mini-fwrd-down.png in Resources */,
+				55350592134761040032BAE4 /* mini-fwrd-up.png in Resources */,
+				55350593134761040032BAE4 /* mini-back-down.png in Resources */,
+				55350594134761040032BAE4 /* mini-back-up.png in Resources */,
+				55350595134761040032BAE4 /* mini-pause-down.png in Resources */,
+				55350596134761040032BAE4 /* mini-pause-up.png in Resources */,
+				55350597134761040032BAE4 /* mini-play-up.png in Resources */,
+				55350598134761040032BAE4 /* mini-controls.psd in Resources */,
+				55350599134761040032BAE4 /* mini-play-down.png in Resources */,
+				553508A0134917720032BAE4 /* KEXT.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +418,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
@@ -367,7 +431,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
