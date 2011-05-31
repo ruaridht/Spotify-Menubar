@@ -13,6 +13,7 @@
 #import <sys/sysctl.h>
 
 #include "GetPID.h"
+#import "MyView.h"
 
 #import <ShortcutRecorder/ShortcutRecorder.h>
 #import <SDGlobalShortcuts/SDGlobalShortcuts.h>
@@ -45,9 +46,11 @@ typedef struct kinfo_proc kinfo_proc;
 
 - (void)awakeFromNib
 {
+	/*
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showMenubarIcon"]) {
 		[self setStatusItem];
 	}
+	 */
 	
 	// Shortcut Recorders
 	[playPauseRecorder setCanCaptureGlobalHotKeys:YES];
@@ -77,15 +80,18 @@ typedef struct kinfo_proc kinfo_proc;
 	//[self checkSpotifyStatus];
 	// Need to know if the user wants SM to open Spotify.  Or if the user is willing to open spotify themself.
 	// NOTE: Add an 'Open Spotify' keybind and a 'Quit Spotify' keybind (?).
-	[self checkIsSpotifyActive];
+	//[self checkIsSpotifyActive];
+	[self switchMenubarIconStyle:self];
 	
 	if ([openSpotifyOnLaunch state]) {
 		[[NSWorkspace sharedWorkspace] launchApplication:@"Spotify"];
 	}
 	
+	/*
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showMiniControls"]) {
 		[self toggleMiniControls:nil];
 	}
+	 */
 	
 	// Setup the preferences window.
 	[self loadView:generalView];
@@ -141,7 +147,38 @@ typedef struct kinfo_proc kinfo_proc;
 
 - (IBAction)switchMenubarIconStyle:(id)sender
 {
-	[self checkIsSpotifyActive];
+	if ([showMenubarIcon state]) {
+		if ([[menubarIconStyle selectedItem] tag] == 3) {
+			[statusItem release];
+			statusItem = nil;
+			
+			if ( !playItem )
+				[self toggleMiniControls:self];
+		} else {
+			if ( playItem )
+				[self toggleMiniControls:self];
+			
+			if ( !statusItem )
+				[self setStatusItem];
+			[self checkIsSpotifyActive];
+		}
+		
+	} else {
+		[statusItem release];
+		statusItem = nil;
+		
+		[playItem release];
+		playItem = nil;
+		[fwrdItem release];
+		fwrdItem = nil;
+		[backItem release];
+		backItem = nil;
+	}
+	
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"runAsUIAgent"]) {
+		[showMenubarIcon setEnabled:NO];
+		[showMenubarIcon setState:1];
+	}
 }
 
 - (IBAction)switchPreferenceView:(id)sender
@@ -152,8 +189,6 @@ typedef struct kinfo_proc kinfo_proc;
 		[self loadView: generalView];
 	} else if ([sender tag] == 1) {
 		[self loadView: shortcutsView];
-	} else if ([sender tag] == 2) {
-		[self loadView: advancedView];
 	} else if ([sender tag] == 3) {
 		[self loadView: helpView];
 	} else if ([sender tag] == 4) {
@@ -221,8 +256,58 @@ typedef struct kinfo_proc kinfo_proc;
 	}
 }
 
+- (void)toggleMenuForMiniControls
+{
+	[playItem popUpStatusItemMenu:statusMenu];
+}
+
 - (IBAction)toggleMiniControls:(id)sender
 {
+	float width = 25.0;
+	
+	if ( !playItem ) {
+		fwrdItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+		MyView *fwrdView = [MyView new];
+		
+		fwrdView.image = [NSImage imageNamed:@"skip_forward_up"];
+		fwrdView.target = self;
+		fwrdView.action = @selector(sendSkipForwardThreaded);
+		fwrdView.rightAction = @selector(toggleMenuForMiniControls);
+		
+		[fwrdItem setView:fwrdView];
+		[fwrdView release];
+		
+		playItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+		MyView *playView = [MyView new];
+		
+		playView.image = [NSImage imageNamed:@"play_up"];
+		playView.target = self;
+		playView.action = @selector(sendPlayPauseThreaded);
+		playView.rightAction = @selector(toggleMenuForMiniControls);
+		
+		[playItem setView:playView];
+		[playView release];
+		
+		backItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+		MyView *backView = [MyView new];
+		
+		backView.image = [NSImage imageNamed:@"skip_back_up"];
+		backView.target = self;
+		backView.action = @selector(sendSkipBackThreaded);
+		backView.rightAction = @selector(toggleMenuForMiniControls);
+		
+		[backItem setView:backView];
+		[backView release];
+	} else {
+		[playItem release];
+		playItem = nil;
+		[fwrdItem release];
+		fwrdItem = nil;
+		[backItem release];
+		backItem = nil;
+	}
+	
+	/*
 	float width = 25.0;
 	
 	if ( !playItem ) {
@@ -230,20 +315,20 @@ typedef struct kinfo_proc kinfo_proc;
 		playItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
 		backItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
 		
-		[playItem setImage:[NSImage imageNamed:@"mini-play-up"]];
-		[playItem setAlternateImage:[NSImage imageNamed:@"mini-play-down"]];
+		[playItem setImage:[NSImage imageNamed:@"play_up"]];
+		[playItem setAlternateImage:[NSImage imageNamed:@"play_down"]];
 		[playItem setHighlightMode:NO];
 		[playItem setTarget:self];
 		[playItem setAction:@selector(sendPlayPauseThreaded)];
 		
-		[fwrdItem setImage:[NSImage imageNamed:@"mini-fwrd-up"]];
-		[fwrdItem setAlternateImage:[NSImage imageNamed:@"mini-fwrd-down"]];
+		[fwrdItem setImage:[NSImage imageNamed:@"skip_forward_up"]];
+		[fwrdItem setAlternateImage:[NSImage imageNamed:@"skip_forward_down"]];
 		[fwrdItem setHighlightMode:NO];
 		[fwrdItem setTarget:self];
 		[fwrdItem setAction:@selector(sendSkipForwardThreaded)];
 		
-		[backItem setImage:[NSImage imageNamed:@"mini-back-up"]];
-		[backItem setAlternateImage:[NSImage imageNamed:@"mini-back-down"]];
+		[backItem setImage:[NSImage imageNamed:@"skip_back_up"]];
+		[backItem setAlternateImage:[NSImage imageNamed:@"skip_back_down"]];
 		[backItem setHighlightMode:NO];
 		[backItem setTarget:self];
 		[backItem setAction:@selector(sendSkipBackThreaded)];
@@ -258,7 +343,7 @@ typedef struct kinfo_proc kinfo_proc;
 		[backItem release];
 		backItem = nil;
 	}
-	
+	*/
 }
 
 - (IBAction)checkForProcesses:(id)sender
@@ -874,8 +959,10 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showMenubarIcon"];
 		[showMenubarIcon setEnabled:NO];
 		[showMenubarIcon setState:1];
+		[self switchMenubarIconStyle:self];
 	}
 }
+
 
 - (BOOL)shouldBeUIElement
 {

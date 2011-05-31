@@ -73,7 +73,6 @@
 	
 	IBOutlet NSView *generalView;
 	IBOutlet NSView *shortcutsView;
-	IBOutlet NSView *advancedView;
 	IBOutlet NSView *helpView;
 	IBOutlet NSView *aboutView;
 	IBOutlet NSView *simbleView;
@@ -113,6 +112,7 @@
 - (IBAction)openSpotifyPreferences:(id)sender;
 - (IBAction)resetKeybinds:(id)sender;
 - (IBAction)toggleOpenAtLogin:(id)sender;
+- (void)toggleMenuForMiniControls;
 - (IBAction)toggleMiniControls:(id)sender;
 - (IBAction)switchMenubarIconStyle:(id)sender;
 
