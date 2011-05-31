@@ -74,11 +74,13 @@ typedef struct kinfo_proc kinfo_proc;
 	
 	// Setup the preferences window.
 	[self loadView:generalView];
+	
+	NSLog(@"SM Launched");
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-	NSLog(@"SM Launched");
+	//NSLog(@"SM Launched");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
@@ -880,12 +882,21 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 
 - (BOOL)shouldBeUIElement
 {
-	// Do nothing anymore
+	return [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"LSUIElement"] boolValue];
 }
 
 - (void)setShouldBeUIElement:(BOOL)hidden
 {
-	// Do nothing anymore
+	NSString * plistPath = nil;
+	NSFileManager *manager = [NSFileManager defaultManager];
+	if (plistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"]) {
+		if ([manager isWritableFileAtPath:plistPath]) {
+			NSMutableDictionary *infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+			[infoDict setObject:[NSNumber numberWithBool:hidden] forKey:@"LSUIElement"];
+			[infoDict writeToFile:plistPath atomically:NO];
+			[manager setAttributes:[NSDictionary dictionaryWithObject:[NSDate date] forKey:NSFileModificationDate] ofItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
+		}
+	}
 }
 
 @end
