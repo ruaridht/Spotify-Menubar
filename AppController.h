@@ -41,8 +41,6 @@
 	IBOutlet NSMenu *statusMenu;
 	
 	// Interface Stuff
-	IBOutlet NSWindow *preferencesWindow;
-	IBOutlet NSWindow *aboutWindow;
 	IBOutlet NSWindow *welcomeWindow;
 	
 	IBOutlet SRRecorderControl *playPauseRecorder;

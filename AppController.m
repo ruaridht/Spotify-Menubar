@@ -39,19 +39,12 @@ typedef struct kinfo_proc kinfo_proc;
 	queue = [[NSOperationQueue alloc] init];
 	
 	spotifyChecker = [NSTimer scheduledTimerWithTimeInterval:10.0 target: self selector: @selector(checkIsSpotifyActive) userInfo:nil repeats:YES];
-	//[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showMenubarIcon"];
     
 	return self;
 }
 
 - (void)awakeFromNib
 {
-	/*
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showMenubarIcon"]) {
-		[self setStatusItem];
-	}
-	 */
-	
 	// Shortcut Recorders
 	[playPauseRecorder setCanCaptureGlobalHotKeys:YES];
 	[skipForwardRecorder setCanCaptureGlobalHotKeys:YES];
@@ -77,21 +70,7 @@ typedef struct kinfo_proc kinfo_proc;
 		[welcomeWindow makeKeyAndOrderFront:self];
 	}
 	
-	//[self checkSpotifyStatus];
-	// Need to know if the user wants SM to open Spotify.  Or if the user is willing to open spotify themself.
-	// NOTE: Add an 'Open Spotify' keybind and a 'Quit Spotify' keybind (?).
-	//[self checkIsSpotifyActive];
 	[self switchMenubarIconStyle:self];
-	
-	if ([openSpotifyOnLaunch state]) {
-		[[NSWorkspace sharedWorkspace] launchApplication:@"Spotify"];
-	}
-	
-	/*
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showMiniControls"]) {
-		[self toggleMiniControls:nil];
-	}
-	 */
 	
 	// Setup the preferences window.
 	[self loadView:generalView];
@@ -222,7 +201,6 @@ typedef struct kinfo_proc kinfo_proc;
 
 - (IBAction)openPreferences:(id)sender
 {
-	//[preferencesWindow makeKeyAndOrderFront:NULL];
 	[NSApp activateIgnoringOtherApps:YES];
 	[prefWindow makeKeyAndOrderFront:self];
 }
@@ -306,53 +284,11 @@ typedef struct kinfo_proc kinfo_proc;
 		[backItem release];
 		backItem = nil;
 	}
-	
-	/*
-	float width = 25.0;
-	
-	if ( !playItem ) {
-		fwrdItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
-		playItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
-		backItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
-		
-		[playItem setImage:[NSImage imageNamed:@"play_up"]];
-		[playItem setAlternateImage:[NSImage imageNamed:@"play_down"]];
-		[playItem setHighlightMode:NO];
-		[playItem setTarget:self];
-		[playItem setAction:@selector(sendPlayPauseThreaded)];
-		
-		[fwrdItem setImage:[NSImage imageNamed:@"skip_forward_up"]];
-		[fwrdItem setAlternateImage:[NSImage imageNamed:@"skip_forward_down"]];
-		[fwrdItem setHighlightMode:NO];
-		[fwrdItem setTarget:self];
-		[fwrdItem setAction:@selector(sendSkipForwardThreaded)];
-		
-		[backItem setImage:[NSImage imageNamed:@"skip_back_up"]];
-		[backItem setAlternateImage:[NSImage imageNamed:@"skip_back_down"]];
-		[backItem setHighlightMode:NO];
-		[backItem setTarget:self];
-		[backItem setAction:@selector(sendSkipBackThreaded)];
-		
-	} else {
-		[playItem release];
-		playItem = nil;
-		
-		[fwrdItem release];
-		fwrdItem = nil;
-		
-		[backItem release];
-		backItem = nil;
-	}
-	*/
 }
 
 - (IBAction)checkForProcesses:(id)sender
 {
-	//NSString *processName = [textfield stringValue];
-	
-	//[self obtainFreshProcessList];
-	
-	//[self findProcessWithName:processName];
+	// What are we doing here eh?
 }
 
 - (IBAction)findProcessesWithName:(id)sender
@@ -373,28 +309,16 @@ typedef struct kinfo_proc kinfo_proc;
 - (IBAction)sendPlayPause:(id)sender
 {
 	[self pressHotkey:49 withModifier:0];
-	/*
-	NSInvocationOperation* theOp = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(sendPlayPauseThreaded) object:nil];
-	[[[NSApp delegate] operationQueue] addOperation:theOp];
-	*/
 }
 
 - (IBAction)sendSkipForward:(id)sender
 {
 	[self pressHotkey:124 withModifier:NSCommandKeyMask];
-	/*
-	NSInvocationOperation* theOp = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(sendSkipForwardThreaded) object:nil];
-	[[[NSApp delegate] operationQueue] addOperation:theOp];
-	 */
 }
 
 - (IBAction)sendSkipBack:(id)sender
 {
 	[self pressHotkey:123 withModifier:NSCommandKeyMask];
-	/*
-	NSInvocationOperation* theOp = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(sendSkipBackThreaded) object:nil];
-	[[[NSApp delegate] operationQueue] addOperation:theOp];
-	 */
 }
 
 - (IBAction)sendKeystroke:(id)sender
@@ -479,12 +403,8 @@ typedef struct kinfo_proc kinfo_proc;
 		}
 		return;
 	}
-	// Since we are receiving a hotkey at the same time?
-	// This is weird, but understandable, since we want to send a keystroke at roughly the same time we press =[
-	//usleep(100000);
 	
     if((hotkey < 0) || (hotkey > 128)) return;
-    //if(modifier < 0 || modifier > 3) return;
     
     unsigned int flags = modifier;
     ProcessSerialNumber spotPSN = [self getSpotifyProcessSerialNumber];
@@ -587,7 +507,6 @@ typedef struct kinfo_proc kinfo_proc;
         
         if(keyDn)  CFRelease(keyDn);
         if(keyUp)  CFRelease(keyUp);
-        // CFRelease(source);
     } else {
         // We can't post the event.  Notify the user?
     }
@@ -598,7 +517,6 @@ typedef struct kinfo_proc kinfo_proc;
     if(theSource == NULL) {
         theSource = CGEventSourceCreate(kCGEventSourceStateHIDSystemState);  
         if(theSource) {
-            //CGEventSourceSetKeyboardType(theSource, LMGetKbdType());
 			CGEventSourceSetKeyboardType(theSource, kCGAnyInputEventType);
             CGEventSourceSetLocalEventsSuppressionInterval(theSource, 0.0);
             CGEventSourceSetLocalEventsFilterDuringSuppressionState(theSource, kCGEventFilterMaskPermitLocalMouseEvents, kCGEventSuppressionStateSuppressionInterval);
@@ -724,9 +642,7 @@ typedef struct kinfo_proc kinfo_proc;
     }
 	
     [self setNumberOfProcesses:numProcs];
-	
-    // NSLog(@"# of elements = %d total # of process = %d\n",
-    //         [processArray count], numProcs );
+
 	
     free( allProcs );
 	
@@ -950,11 +866,9 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 - (IBAction)setApplicationIsAgent:(id)sender
 {
 	if (![[NSUserDefaults standardUserDefaults] boolForKey:@"runAsUIAgent"]) {
-		//NSLog(@"Show Dock Icon");
 		[self setShouldBeUIElement:NO];
 		[showMenubarIcon setEnabled:YES];
 	} else {
-		//NSLog(@"Hide Dock Icon");
 		[self setShouldBeUIElement:YES];
 		[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showMenubarIcon"];
 		[showMenubarIcon setEnabled:NO];
@@ -966,21 +880,12 @@ static int GetBSDProcessList(kinfo_proc **procList, size_t *procCount)
 
 - (BOOL)shouldBeUIElement
 {
-	return [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"LSUIElement"] boolValue];
+	// Do nothing anymore
 }
 
 - (void)setShouldBeUIElement:(BOOL)hidden
 {
-	NSString * plistPath = nil;
-	NSFileManager *manager = [NSFileManager defaultManager];
-	if (plistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"]) {
-		if ([manager isWritableFileAtPath:plistPath]) {
-			NSMutableDictionary *infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
-			[infoDict setObject:[NSNumber numberWithBool:hidden] forKey:@"LSUIElement"];
-			[infoDict writeToFile:plistPath atomically:NO];
-			[manager setAttributes:[NSDictionary dictionaryWithObject:[NSDate date] forKey:NSFileModificationDate] ofItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
-		}
-	}
+	// Do nothing anymore
 }
 
 @end
