@@ -50,6 +50,18 @@ typedef struct kinfo_proc kinfo_proc;
 	[skipForwardRecorder setCanCaptureGlobalHotKeys:YES];
 	[skipBackRecorder setCanCaptureGlobalHotKeys:YES];
 	
+	NSString *path = [NSString stringWithFormat:@"%@%@%@", @"/Users/", NSUserName(), @"/Library/Preferences/com.lifeupnorth.Spotify-Menubar.plist"];
+	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+	if ( !dict ) {
+		NSDictionary *ppGH = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:49], @"keyCode", [NSNumber numberWithInt:2560], @"modifiers", nil];
+		NSDictionary *sfGH = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:124], @"keyCode", [NSNumber numberWithInt:8391168], @"modifiers", nil];
+		NSDictionary *sbGH = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:123], @"keyCode", [NSNumber numberWithInt:8391168], @"modifiers", nil];
+		[[NSUserDefaults standardUserDefaults] setObject:ppGH forKey:@"ppGlobalHotkey"];
+		[[NSUserDefaults standardUserDefaults] setObject:sfGH forKey:@"sfGlobalHotkey"];
+		[[NSUserDefaults standardUserDefaults] setObject:sbGH forKey:@"sbGlobalHotkey"];
+		
+	}
+	
 	SDGlobalShortcutsController *shortcutsController = [SDGlobalShortcutsController sharedShortcutsController];
 	[shortcutsController addShortcutFromDefaultsKey:@"ppGlobalHotkey"
 										withControl:playPauseRecorder
@@ -75,7 +87,7 @@ typedef struct kinfo_proc kinfo_proc;
 	// Setup the preferences window.
 	[self loadView:generalView];
 	
-	NSLog(@"SM Launched");
+	//NSLog(@"SM Launched");
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
@@ -130,8 +142,11 @@ typedef struct kinfo_proc kinfo_proc;
 {
 	if ([showMenubarIcon state]) {
 		if ([[menubarIconStyle selectedItem] tag] == 3) {
-			[statusItem release];
-			statusItem = nil;
+			if (statusItem) {
+				[[NSStatusBar systemStatusBar] removeStatusItem:statusItem];
+				[statusItem release];
+				statusItem = nil;
+			}
 			
 			if ( !playItem )
 				[self toggleMiniControls:self];
@@ -139,6 +154,7 @@ typedef struct kinfo_proc kinfo_proc;
 			if ( playItem )
 				[self toggleMiniControls:self];
 			
+			//usleep(10000);
 			if ( !statusItem )
 				[self setStatusItem];
 			[self checkIsSpotifyActive];
@@ -279,6 +295,16 @@ typedef struct kinfo_proc kinfo_proc;
 		[backItem setView:backView];
 		[backView release];
 	} else {
+		[[NSStatusBar systemStatusBar] removeStatusItem:playItem];
+		[[NSStatusBar systemStatusBar] removeStatusItem:fwrdItem];
+		[[NSStatusBar systemStatusBar] removeStatusItem:backItem];
+		
+		[playItem release];
+		playItem = nil;
+		[fwrdItem release];
+		fwrdItem = nil;
+		[backItem release];
+		backItem = nil;
 		[playItem release];
 		playItem = nil;
 		[fwrdItem release];
