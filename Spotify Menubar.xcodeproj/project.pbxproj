@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		55148D131222F21A006BDA27 /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55148D121222F21A006BDA27 /* welcome.jpg */; };
+		551938D81305863200808B2F /* statusOffGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 551938D71305863200808B2F /* statusOffGrey.png */; };
+		55350591134761040032BAE4 /* mini-fwrd-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 55350588134761030032BAE4 /* mini-fwrd-down.png */; };
+		55350592134761040032BAE4 /* mini-fwrd-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 55350589134761030032BAE4 /* mini-fwrd-up.png */; };
+		55350593134761040032BAE4 /* mini-back-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058A134761030032BAE4 /* mini-back-down.png */; };
+		55350594134761040032BAE4 /* mini-back-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058B134761030032BAE4 /* mini-back-up.png */; };
+		55350595134761040032BAE4 /* mini-pause-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058C134761040032BAE4 /* mini-pause-down.png */; };
+		55350596134761040032BAE4 /* mini-pause-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058D134761040032BAE4 /* mini-pause-up.png */; };
+		55350597134761040032BAE4 /* mini-play-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5535058E134761040032BAE4 /* mini-play-up.png */; };
+		55350598134761040032BAE4 /* mini-controls.psd in Resources */ = {isa = PBXBuildFile; fileRef = 5535058F134761040032BAE4 /* mini-controls.psd */; };
+		55350599134761040032BAE4 /* mini-play-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 55350590134761040032BAE4 /* mini-play-down.png */; };
+		553508A0134917720032BAE4 /* KEXT.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5535089F134917720032BAE4 /* KEXT.icns */; };
+		553E7A37139544F4001F6398 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553E7A36139544F4001F6398 /* MyView.m */; };
+		554407B011BC47F500804FD7 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554407AF11BC47F500804FD7 /* AppController.m */; };
+		555C9C1912E867D1007446C0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1712E867D1007446C0 /* LICENSE */; };
+		555C9C1A12E867D1007446C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 555C9C1812E867D1007446C0 /* README */; };
+		5581F65F138ED5F400BC1A22 /* buttons.psd in Resources */ = {isa = PBXBuildFile; fileRef = 5581F656138ED5F400BC1A22 /* buttons.psd */; };
+		5581F660138ED5F400BC1A22 /* pause_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F657138ED5F400BC1A22 /* pause_up.png */; };
+		5581F661138ED5F400BC1A22 /* play_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F658138ED5F400BC1A22 /* play_up.png */; };
+		5581F662138ED5F400BC1A22 /* skip_back_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F659138ED5F400BC1A22 /* skip_back_up.png */; };
+		5581F663138ED5F400BC1A22 /* play_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F65A138ED5F400BC1A22 /* play_down.png */; };
+		5581F664138ED5F400BC1A22 /* skip_forward_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F65B138ED5F400BC1A22 /* skip_forward_up.png */; };
+		5581F665138ED5F400BC1A22 /* pause_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F65C138ED5F400BC1A22 /* pause_down.png */; };
+		5581F666138ED5F400BC1A22 /* skip_back_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F65D138ED5F400BC1A22 /* skip_back_down.png */; };
+		5581F667138ED5F400BC1A22 /* skip_forward_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5581F65E138ED5F400BC1A22 /* skip_forward_down.png */; };
+		55AEAFD613436D4B00174BE0 /* Keyboard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55AEAFD413436D4B00174BE0 /* Keyboard.icns */; };
+		55AEAFD713436D4B00174BE0 /* PTKeyboardIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 55AEAFD513436D4B00174BE0 /* PTKeyboardIcon.tiff */; };
+		55AEAFD913436EA900174BE0 /* Family.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55AEAFD813436EA900174BE0 /* Family.icns */; };
+		55AEB00D1343734800174BE0 /* UIDivider.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AEB00C1343734800174BE0 /* UIDivider.png */; };
+		55AFE414121C32E000DFAAC1 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
+		55AFE417121C32E300DFAAC1 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */; };
+		55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE47C121C3DB100DFAAC1 /* Carbon.framework */; };
+		55AFE5AD121C5AB400DFAAC1 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */; };
+		55AFE5B6121C5AB700DFAAC1 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */; };
+		55B1241412F832A00012A986 /* SDGlobalShortcuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */; };
+		55B1241A12F832A50012A986 /* SDGlobalShortcuts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */; };
+		55BC16B112210C5E00E9A4AE /* statusOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC16B012210C5E00E9A4AE /* statusOn.png */; };
+		55BC17A81221203100E9A4AE /* statusHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17A61221203100E9A4AE /* statusHighlight.png */; };
+		55BC17A91221203100E9A4AE /* statusOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17A71221203100E9A4AE /* statusOff.png */; };
+		55BC17EA12212B5900E9A4AE /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17E912212B5900E9A4AE /* appIcon.icns */; };
+		55BC180112212C9500E9A4AE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 55BC17FF12212C9500E9A4AE /* Credits.rtf */; };
+		55BE178511BCFB8300F4E587 /* GetPID.c in Sources */ = {isa = PBXBuildFile; fileRef = 55BE178311BCFB8300F4E587 /* GetPID.c */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55AFE430121C344600DFAAC1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				55B1241A12F832A50012A986 /* SDGlobalShortcuts.framework in CopyFiles */,
+				55AFE5B6121C5AB700DFAAC1 /* Sparkle.framework in CopyFiles */,
+				55AFE417121C32E300DFAAC1 /* ShortcutRecorder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* Spotify_Menubar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify_Menubar_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		55148D121222F21A006BDA27 /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpg; sourceTree = "<group>"; };
+		551938D71305863200808B2F /* statusOffGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOffGrey.png; sourceTree = "<group>"; };
+		55350588134761030032BAE4 /* mini-fwrd-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-fwrd-down.png"; sourceTree = "<group>"; };
+		55350589134761030032BAE4 /* mini-fwrd-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-fwrd-up.png"; sourceTree = "<group>"; };
+		5535058A134761030032BAE4 /* mini-back-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-back-down.png"; sourceTree = "<group>"; };
+		5535058B134761030032BAE4 /* mini-back-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-back-up.png"; sourceTree = "<group>"; };
+		5535058C134761040032BAE4 /* mini-pause-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-pause-down.png"; sourceTree = "<group>"; };
+		5535058D134761040032BAE4 /* mini-pause-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-pause-up.png"; sourceTree = "<group>"; };
+		5535058E134761040032BAE4 /* mini-play-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-play-up.png"; sourceTree = "<group>"; };
+		5535058F134761040032BAE4 /* mini-controls.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mini-controls.psd"; sourceTree = "<group>"; };
+		55350590134761040032BAE4 /* mini-play-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mini-play-down.png"; sourceTree = "<group>"; };
+		5535089F134917720032BAE4 /* KEXT.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = KEXT.icns; sourceTree = "<group>"; };
+		553E7A35139544F4001F6398 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		553E7A36139544F4001F6398 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		554407AE11BC47F500804FD7 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		554407AF11BC47F500804FD7 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		555C9C1712E867D1007446C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		555C9C1812E867D1007446C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		5581F656138ED5F400BC1A22 /* buttons.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = buttons.psd; sourceTree = "<group>"; };
+		5581F657138ED5F400BC1A22 /* pause_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_up.png; sourceTree = "<group>"; };
+		5581F658138ED5F400BC1A22 /* play_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_up.png; sourceTree = "<group>"; };
+		5581F659138ED5F400BC1A22 /* skip_back_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip_back_up.png; sourceTree = "<group>"; };
+		5581F65A138ED5F400BC1A22 /* play_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_down.png; sourceTree = "<group>"; };
+		5581F65B138ED5F400BC1A22 /* skip_forward_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip_forward_up.png; sourceTree = "<group>"; };
+		5581F65C138ED5F400BC1A22 /* pause_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_down.png; sourceTree = "<group>"; };
+		5581F65D138ED5F400BC1A22 /* skip_back_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip_back_down.png; sourceTree = "<group>"; };
+		5581F65E138ED5F400BC1A22 /* skip_forward_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip_forward_down.png; sourceTree = "<group>"; };
+		55AEAFD413436D4B00174BE0 /* Keyboard.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Keyboard.icns; sourceTree = "<group>"; };
+		55AEAFD513436D4B00174BE0 /* PTKeyboardIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PTKeyboardIcon.tiff; sourceTree = "<group>"; };
+		55AEAFD813436EA900174BE0 /* Family.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Family.icns; sourceTree = "<group>"; };
+		55AEB00C1343734800174BE0 /* UIDivider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIDivider.png; sourceTree = "<group>"; };
+		55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = /Users/Northern/DockDesktop/DesktopME/Dev/shortcutrecorder/build/Release/ShortcutRecorder.framework; sourceTree = "<absolute>"; };
+		55AFE47C121C3DB100DFAAC1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDGlobalShortcuts.framework; sourceTree = "<group>"; };
+		55BC16B012210C5E00E9A4AE /* statusOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOn.png; sourceTree = "<group>"; };
+		55BC17A61221203100E9A4AE /* statusHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusHighlight.png; sourceTree = "<group>"; };
+		55BC17A71221203100E9A4AE /* statusOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusOff.png; sourceTree = "<group>"; };
+		55BC17E912212B5900E9A4AE /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
+		55BC180012212C9500E9A4AE /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		55BE178311BCFB8300F4E587 /* GetPID.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GetPID.c; sourceTree = "<group>"; };
+		55BE178411BCFB8300F4E587 /* GetPID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPID.h; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Spotify_Menubar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Spotify_Menubar-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Spotify Menubar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify Menubar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				55AFE414121C32E000DFAAC1 /* ShortcutRecorder.framework in Frameworks */,
+				55AFE47D121C3DB100DFAAC1 /* Carbon.framework in Frameworks */,
+				55AFE5AD121C5AB400DFAAC1 /* Sparkle.framework in Frameworks */,
+				55B1241412F832A00012A986 /* SDGlobalShortcuts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				554407AE11BC47F500804FD7 /* AppController.h */,
+				554407AF11BC47F500804FD7 /* AppController.m */,
+				55BE178311BCFB8300F4E587 /* GetPID.c */,
+				55BE178411BCFB8300F4E587 /* GetPID.h */,
+				553E7A35139544F4001F6398 /* MyView.h */,
+				553E7A36139544F4001F6398 /* MyView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55B1241312F832A00012A986 /* SDGlobalShortcuts.framework */,
+				55AFE5AC121C5AB400DFAAC1 /* Sparkle.framework */,
+				55AFE47C121C3DB100DFAAC1 /* Carbon.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55AFE413121C32E000DFAAC1 /* ShortcutRecorder.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Spotify Menubar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Spotify Menubar */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "Spotify Menubar";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* Spotify_Menubar_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55BC169912210C3000E9A4AE /* Images */,
+				555C9C1712E867D1007446C0 /* LICENSE */,
+				555C9C1812E867D1007446C0 /* README */,
+				55BC17FF12212C9500E9A4AE /* Credits.rtf */,
+				8D1107310486CEB800E47090 /* Spotify_Menubar-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55350587134760F80032BAE4 /* Mini Controls */ = {
+			isa = PBXGroup;
+			children = (
+				55350588134761030032BAE4 /* mini-fwrd-down.png */,
+				55350589134761030032BAE4 /* mini-fwrd-up.png */,
+				5535058A134761030032BAE4 /* mini-back-down.png */,
+				5535058B134761030032BAE4 /* mini-back-up.png */,
+				5535058C134761040032BAE4 /* mini-pause-down.png */,
+				5535058D134761040032BAE4 /* mini-pause-up.png */,
+				5535058E134761040032BAE4 /* mini-play-up.png */,
+				5535058F134761040032BAE4 /* mini-controls.psd */,
+				55350590134761040032BAE4 /* mini-play-down.png */,
+			);
+			name = "Mini Controls";
+			sourceTree = "<group>";
+		};
+		5581F655138ED28200BC1A22 /* Mini Controls Minimal */ = {
+			isa = PBXGroup;
+			children = (
+				5581F656138ED5F400BC1A22 /* buttons.psd */,
+				5581F657138ED5F400BC1A22 /* pause_up.png */,
+				5581F658138ED5F400BC1A22 /* play_up.png */,
+				5581F659138ED5F400BC1A22 /* skip_back_up.png */,
+				5581F65A138ED5F400BC1A22 /* play_down.png */,
+				5581F65B138ED5F400BC1A22 /* skip_forward_up.png */,
+				5581F65C138ED5F400BC1A22 /* pause_down.png */,
+				5581F65D138ED5F400BC1A22 /* skip_back_down.png */,
+				5581F65E138ED5F400BC1A22 /* skip_forward_down.png */,
+			);
+			name = "Mini Controls Minimal";
+			sourceTree = "<group>";
+		};
+		55BC169912210C3000E9A4AE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5581F655138ED28200BC1A22 /* Mini Controls Minimal */,
+				55350587134760F80032BAE4 /* Mini Controls */,
+				55AEB00C1343734800174BE0 /* UIDivider.png */,
+				5535089F134917720032BAE4 /* KEXT.icns */,
+				55AEAFD813436EA900174BE0 /* Family.icns */,
+				55AEAFD413436D4B00174BE0 /* Keyboard.icns */,
+				55AEAFD513436D4B00174BE0 /* PTKeyboardIcon.tiff */,
+				55148D121222F21A006BDA27 /* welcome.jpg */,
+				55BC17E912212B5900E9A4AE /* appIcon.icns */,
+				55BC17A61221203100E9A4AE /* statusHighlight.png */,
+				55BC17A71221203100E9A4AE /* statusOff.png */,
+				551938D71305863200808B2F /* statusOffGrey.png */,
+				55BC16B012210C5E00E9A4AE /* statusOn.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Spotify Menubar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Spotify Menubar" */;
+			buildPhases = (
+				55AFE430121C344600DFAAC1 /* CopyFiles */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spotify Menubar";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "Spotify Menubar";
+			productReference = 8D1107320486CEB800E47090 /* Spotify Menubar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Life Up North/Ruaridh Thomson";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Spotify Menubar" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Spotify Menubar */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Spotify Menubar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				55BC16B112210C5E00E9A4AE /* statusOn.png in Resources */,
+				55BC17A81221203100E9A4AE /* statusHighlight.png in Resources */,
+				55BC17A91221203100E9A4AE /* statusOff.png in Resources */,
+				55BC17EA12212B5900E9A4AE /* appIcon.icns in Resources */,
+				55BC180112212C9500E9A4AE /* Credits.rtf in Resources */,
+				55148D131222F21A006BDA27 /* welcome.jpg in Resources */,
+				555C9C1912E867D1007446C0 /* LICENSE in Resources */,
+				555C9C1A12E867D1007446C0 /* README in Resources */,
+				551938D81305863200808B2F /* statusOffGrey.png in Resources */,
+				55AEAFD613436D4B00174BE0 /* Keyboard.icns in Resources */,
+				55AEAFD713436D4B00174BE0 /* PTKeyboardIcon.tiff in Resources */,
+				55AEAFD913436EA900174BE0 /* Family.icns in Resources */,
+				55AEB00D1343734800174BE0 /* UIDivider.png in Resources */,
+				55350591134761040032BAE4 /* mini-fwrd-down.png in Resources */,
+				55350592134761040032BAE4 /* mini-fwrd-up.png in Resources */,
+				55350593134761040032BAE4 /* mini-back-down.png in Resources */,
+				55350594134761040032BAE4 /* mini-back-up.png in Resources */,
+				55350595134761040032BAE4 /* mini-pause-down.png in Resources */,
+				55350596134761040032BAE4 /* mini-pause-up.png in Resources */,
+				55350597134761040032BAE4 /* mini-play-up.png in Resources */,
+				55350598134761040032BAE4 /* mini-controls.psd in Resources */,
+				55350599134761040032BAE4 /* mini-play-down.png in Resources */,
+				553508A0134917720032BAE4 /* KEXT.icns in Resources */,
+				5581F65F138ED5F400BC1A22 /* buttons.psd in Resources */,
+				5581F660138ED5F400BC1A22 /* pause_up.png in Resources */,
+				5581F661138ED5F400BC1A22 /* play_up.png in Resources */,
+				5581F662138ED5F400BC1A22 /* skip_back_up.png in Resources */,
+				5581F663138ED5F400BC1A22 /* play_down.png in Resources */,
+				5581F664138ED5F400BC1A22 /* skip_forward_up.png in Resources */,
+				5581F665138ED5F400BC1A22 /* pause_down.png in Resources */,
+				5581F666138ED5F400BC1A22 /* skip_back_down.png in Resources */,
+				5581F667138ED5F400BC1A22 /* skip_forward_down.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				554407B011BC47F500804FD7 /* AppController.m in Sources */,
+				55BE178511BCFB8300F4E587 /* GetPID.c in Sources */,
+				553E7A37139544F4001F6398 /* MyView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		55BC17FF12212C9500E9A4AE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BC180012212C9500E9A4AE /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BWToolkit\"",
+					"\"$(SRCROOT)/../shortcutrecorder/build/Release\"",
+					"\"$(SRCROOT)/../Sparkle 1.5b6\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Spotify_Menubar_Prefix.pch;
+				INFOPLIST_FILE = "Spotify_Menubar-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Spotify Menubar";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BWToolkit\"",
+					"\"$(SRCROOT)/../shortcutrecorder/build/Release\"",
+					"\"$(SRCROOT)/../Sparkle 1.5b6\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Spotify_Menubar_Prefix.pch;
+				INFOPLIST_FILE = "Spotify_Menubar-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Spotify Menubar";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Spotify Menubar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Spotify Menubar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
